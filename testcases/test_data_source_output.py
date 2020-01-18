@@ -15,7 +15,7 @@ from common.getData import GetData
 ds = DataSourceOutput()
 
 datasource_list_schema = GetData().read_schema_file('data_source_list.schema')
-datasource_details_schema = GetData().read_schema_file('datasource_details.schema')
+#datasource_details_schema = GetData().read_schema_file('datasource_details.schema')
 
 class TestDataSourceOutput():
 
