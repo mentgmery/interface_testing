@@ -10,8 +10,8 @@
 import pytest
 import allure
 from jsonschema import validate
-from apm_interface_test.apm_modules.data_cleaning_output import DataCleaningOutput
-from apm_interface_test.common.getData import GetData
+from apm_modules.data_cleaning_output import DataCleaningOutput
+from common.getData import GetData
 
 
 data_cleaning_list_schema = GetData().read_schema_file('data_cleaning_list.schema')
