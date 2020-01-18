@@ -10,8 +10,8 @@
 import json
 import requests
 from requests import ReadTimeout, RequestException
-from apm_interface_test.common.getData import GetData
-from apm_interface_test.common.logger import Logger
+from common.getData import GetData
+from common.logger import Logger
 req_session = requests.session()
 
 logger = Logger(logger="ConfigHttp").get_log()
