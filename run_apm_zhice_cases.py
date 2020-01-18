@@ -5,9 +5,9 @@
 '''
 import configparser,os.path
 import os,subprocess
-from apm_interface_test.common.setCookie import Set_Cookie
+from common.setCookie import Set_Cookie
 current_path = os.path.abspath(__file__)
-from apm_interface_test.common.logger import Logger
+from common.logger import Logger
 logger = Logger(logger="run_apm_zhice_Test").get_log()
 
 
