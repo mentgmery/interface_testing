@@ -9,8 +9,8 @@
 '''
 import allure,pytest
 from jsonschema import validate
-from apm_interface_test.apm_modules.data_source_output import DataSourceOutput
-from apm_interface_test.common.getData import GetData
+from apm_modules.data_source_output import DataSourceOutput
+from common.getData import GetData
 
 ds = DataSourceOutput()
 
