@@ -10,8 +10,8 @@
 
 import pytest,allure
 from jsonschema import validate
-from apm_interface_test.apm_modules.template_mgt_output import TemplateMgtOutput
-from apm_interface_test.common.getData import GetData
+from apm_modules.template_mgt_output import TemplateMgtOutput
+from common.getData import GetData
 
 tm=TemplateMgtOutput()
 
