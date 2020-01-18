@@ -9,8 +9,8 @@
 '''
 
 import json
-from apm_interface_test.common import configHTTP
-from apm_interface_test.common.getData import GetData
+from common import configHTTP
+from common.getData import GetData
 
 cf = configHTTP.ConfigHttp()
 
