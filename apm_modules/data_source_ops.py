@@ -28,5 +28,5 @@ class DataSourceOps(OpenURL):
         self.driver.get(url)
         #self.driver.page_source
         #id_value=self.driver.find_element_by_id('su').get_attribute("value")#取什么值自己定位元素
-        id_value=self.driver.find_element_by_id('su').is_displayed()# 判断元素是否存在
-        return id_value
+        visible=self.driver.find_element_by_id('su').is_displayed()# 判断元素是否存在
+        return visible
