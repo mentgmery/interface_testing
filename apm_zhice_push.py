@@ -48,4 +48,6 @@ def dd_push(url):
 
 if __name__ == '__main__':
     apm_test_group = 'https://oapi.dingtalk.com/robot/send?access_token=46fa45901474dcb529094b1716ab54894730edcc300c6a85aa3e0b5923444578' #测试组
+    apm_group = 'https://oapi.dingtalk.com/robot/send?access_token=0536de662e39c93a7112af7aacfd19c95125188bf1b6fbb19271d31e49fc045a'
     dd_push(apm_test_group)
+    dd_push(apm_group)
