@@ -16,7 +16,7 @@ ds = DataSourceOutput()
 
 datasource_list_schema = GetData().read_schema_file('data_source_list.schema')
 #datasource_details_schema = GetData().read_schema_file('datasource_details.schema')
-
+@allure.feature("数据源—输出")
 class TestDataSourceOutput():
 
     @pytest.mark.DataSource
