@@ -31,3 +31,7 @@ class TestDataCleaningOutput():
     def test_data1(self):
         #测试CI
         pass
+
+    def test_data2(self):
+        #测试CI
+        pass
