@@ -7,3 +7,13 @@
 @Version:1.0
 @Desc   :  pytest配置文件
 '''
+import pytest
+from common.openbrowser import OpenURL
+
+@pytest.fixture()
+def driver_setup(request):
+    browser = OpenURL(request)
+    request.instance.driver = browser.open_browser(request)
+    def driver_teardown():
+         request.instance.driver.quit()
+    request.addfinalizer(driver_teardown)

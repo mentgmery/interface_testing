@@ -9,25 +9,24 @@
 '''
 
 import json
+import time
+
 from common import configHTTP
-from common.getData import GetData
+from common.openbrowser import OpenURL
 
 cf = configHTTP.ConfigHttp()
 
 
-class DataSourceOps():
+class DataSourceOps(OpenURL):
 
-    '''
-    @Author : zhumeng
-    @Desc   :
-    @param  :
-    '''
-    def alter_data(self,dataType,dataDirName):
-        str_data_Type = uploadData_json['dataSetModelStr']
-        str_data_Type = str_data_Type[:13] + dataType + str_data_Type[17:]
-        uploadData_json['dataSetModelStr'] = str_data_Type[:79] + dataDirName + str_data_Type[-2:]
-        # str_data_Type = uploadData_json['dataSetModelStr']
-        # uploadData_json['dataSetModelStr']=str_data_Type.replace('实体识别',dataType)
-        # str_data_Type=uploadData_json['dataSetModelStr']
-        # str_data= str_data_Type.replace('接口自动化—生死疲劳已标注.txt', dataDirName)
-        return uploadData_json['dataSetModelStr']
+    def datasource_add_data(self,url):
+        """
+        数据源—动作，打开浏览器，访问url获取元素值
+        :param url: 动作的url地址
+        :return: 特定元素的属性值。
+        """
+        self.driver.get(url)
+        #self.driver.page_source
+        #id_value=self.driver.find_element_by_id('su').get_attribute("value")#取什么值自己定位元素
+        id_value=self.driver.find_element_by_id('su').is_displayed()# 判断元素是否存在
+        return id_value

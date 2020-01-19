@@ -19,6 +19,7 @@ template_mgt_list_schema = GetData().read_schema_file('template_mgt_list.schema'
 
 #template_mgt_details_schema = GetData().read_schema_file('template_mgt_details.schema')
 
+@allure.feature("模板管理—输出")
 class TestTemplateMgt():
 
     @pytest.mark.TemplateMgt
