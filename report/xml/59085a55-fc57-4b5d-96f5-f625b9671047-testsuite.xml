@@ -1,0 +1,39 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1579407934056" stop="1579407934056">
+  <description>This is the tests collection phase. Failures are modules that failed to collect.</description>
+  <name>test_collection_phase</name>
+  <title>Collection phase</title>
+  <labels/>
+  <test-cases>
+    <test-case start="1579407934056" status="broken" stop="1579407934056">
+      <name>test_data_source_ops</name>
+      <failure>
+        <message>failed</message>
+        <stack-trace>ImportError while importing test module '/Users/zhumeng/Documents/apm_test/apm_interface_test/testcases/test_data_source_ops.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+testcases/test_data_source_ops.py:11: in &lt;module&gt;
+    from apm_modules.template_mgt_ops import TemplateMgtOps
+E   ModuleNotFoundError: No module named 'apm_modules.template_mgt_ops'</stack-trace>
+      </failure>
+      <attachments/>
+      <labels/>
+      <steps/>
+    </test-case>
+    <test-case start="1579407934056" status="broken" stop="1579407934056">
+      <name>test_data_source_output</name>
+      <failure>
+        <message>failed</message>
+        <stack-trace>testcases/test_data_source_output.py:18: in &lt;module&gt;
+    datasource_details_schema = GetData().read_schema_file('datasource_details.schema')
+common/getData.py:71: in read_schema_file
+    json_fi = codecs.open(proDir+'/testfiles/schema_file/'+filename,'r',encoding='UTF-8')
+../../../anaconda3/lib/python3.7/codecs.py:898: in open
+    file = builtins.open(filename, mode, buffering)
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/zhumeng/Documents/apm_test/apm_interface_test/testfiles/schema_file/datasource_details.schema'</stack-trace>
+      </failure>
+      <attachments/>
+      <labels/>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,0 +1,39 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "failed",
+      "children" : [ {
+        "name" : "test_data_source_ops",
+        "uid" : "356817c0446bb5e9",
+        "parentUid" : "e226b8e55fc3e865aa231bef699f7a6a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1579407934056,
+          "stop" : 1579407934056,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_data_source_output",
+        "uid" : "1d0d5656f1e7500b",
+        "parentUid" : "e226b8e55fc3e865aa231bef699f7a6a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1579407934056,
+          "stop" : 1579407934056,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e226b8e55fc3e865aa231bef699f7a6a"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

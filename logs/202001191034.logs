@@ -1,0 +1,22 @@
+2020-01-19 10:34:45,321 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:46,980 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:48,525 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:48,633 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:48,714 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:48,797 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:48,861 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:48,953 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,024 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,111 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,183 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,206 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,232 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,303 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,339 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,379 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,420 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,460 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,508 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:49,544 - ConfigHttp - INFO - <Response [200]>
+2020-01-19 10:34:51,865 - run_apm_zhice_Test - INFO - 执行UI自动化测试
+2020-01-19 10:34:55,379 - run_apm_zhice_Test - INFO - 报告地址:/report/html/index.html

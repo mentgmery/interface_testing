@@ -1,0 +1,52 @@
+{
+  "uid" : "1d0d5656f1e7500b",
+  "name" : "test_data_source_output",
+  "fullName" : "test_collection_phase.test_data_source_output",
+  "historyId" : "557c088e8250024c4e3545144e573e1e",
+  "time" : {
+    "start" : 1579407934056,
+    "stop" : 1579407934056,
+    "duration" : 0
+  },
+  "description" : "This is the tests collection phase. Failures are modules that failed to collect.",
+  "descriptionHtml" : "<p>This is the tests collection phase. Failures are modules that failed to collect.</p>\n",
+  "status" : "broken",
+  "statusMessage" : "failed",
+  "statusTrace" : "testcases/test_data_source_output.py:18: in <module>\n    datasource_details_schema = GetData().read_schema_file('datasource_details.schema')\ncommon/getData.py:71: in read_schema_file\n    json_fi = codecs.open(proDir+'/testfiles/schema_file/'+filename,'r',encoding='UTF-8')\n../../../anaconda3/lib/python3.7/codecs.py:898: in open\n    file = builtins.open(filename, mode, buffering)\nE   FileNotFoundError: [Errno 2] No such file or directory: '/Users/zhumeng/Documents/apm_test/apm_interface_test/testfiles/schema_file/datasource_details.schema'",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Collection phase"
+  }, {
+    "name" : "testClass",
+    "value" : "test_collection_phase"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_data_source_output"
+  }, {
+    "name" : "package",
+    "value" : "test_collection_phase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1d0d5656f1e7500b.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,170 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "code",
+    "msg",
+    "data"
+  ],
+  "properties": {
+    "code": {
+      "$id": "#/properties/code",
+      "type": "integer",
+      "title": "The Code Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "msg": {
+      "$id": "#/properties/msg",
+      "type": "string",
+      "title": "The Msg Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "count",
+        "totalPages",
+        "pageSize",
+        "currentPage",
+        "data"
+      ],
+      "properties": {
+        "count": {
+          "$id": "#/properties/data/properties/count",
+          "type": "integer",
+          "title": "The Count Schema",
+          "default": 0,
+          "examples": [
+            3
+          ]
+        },
+        "totalPages": {
+          "$id": "#/properties/data/properties/totalPages",
+          "type": "integer",
+          "title": "The Totalpages Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "pageSize": {
+          "$id": "#/properties/data/properties/pageSize",
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0,
+          "examples": [
+            10
+          ]
+        },
+        "currentPage": {
+          "$id": "#/properties/data/properties/currentPage",
+          "type": "integer",
+          "title": "The Currentpage Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "data": {
+          "$id": "#/properties/data/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/data/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "id",
+              "user_id",
+              "create_time",
+              "update_time",
+              "raw",
+              "case_id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/data/properties/data/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema",
+                "default": 0,
+                "examples": [
+                  312361798
+                ]
+              },
+              "user_id": {
+                "$id": "#/properties/data/properties/data/items/properties/user_id",
+                "type": "null",
+                "title": "The User_id Schema",
+                "default": null,
+                "examples": [
+                  null
+                ]
+              },
+              "create_time": {
+                "$id": "#/properties/data/properties/data/items/properties/create_time",
+                "type": "string",
+                "title": "The Create_time Schema",
+                "default": "",
+                "examples": [
+                  "2020-01-07 14:02:55"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "update_time": {
+                "$id": "#/properties/data/properties/data/items/properties/update_time",
+                "type": "string",
+                "title": "The Update_time Schema",
+                "default": "",
+                "examples": [
+                  "2020-01-07 14:02:55"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "raw": {
+                "$id": "#/properties/data/properties/data/items/properties/raw",
+                "type": "string",
+                "title": "The Raw Schema",
+                "default": "",
+                "examples": [
+                  "{\"id\":\"6B930CFF-2BBE-460F-85CE-D9433643092B\",\"name\":\"Sheet1\",\"file_name\":\"5层穿透-25条数据.xlsx\",\"file_size\":15463,\"file_type\":\".xlsx\",\"line_size\":25,\"create_time\":\"2020-01-07 14:02:55\",\"status\":\"0\"}"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "case_id": {
+                "$id": "#/properties/data/properties/data/items/properties/case_id",
+                "type": "integer",
+                "title": "The Case_id Schema",
+                "default": 0,
+                "examples": [
+                  598756534
+                ]
+              },
+              "type": {
+                "$id": "#/properties/data/properties/data/items/properties/type",
+                "type": "integer",
+                "title": "The Type Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

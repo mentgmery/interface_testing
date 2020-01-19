@@ -1,0 +1,8 @@
+{
+  "test_data_cleaning_output.py": true,
+  "test_data_cleaning_output.py::TestDataCleaningOutput::()::test_data_cleaning_output_schema_check": true,
+  "test_template_mgt_out.py": true,
+  "test_template_mgt_out.py::TestTemplateMgt::()::test_templateMgt_list_invalid_caseid": true,
+  "test_template_mgt_out.py::TestTemplateMgt::()::test_templateMgt_list_null_caseid": true,
+  "test_template_mgt_out.py::TestTemplateMgt::()::test_template_mgt_schema_check": true
+}

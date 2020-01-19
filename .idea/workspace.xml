@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b50bc170-13a4-4260-89c7-b19177f393d6" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/data_cleaning_output.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+              <folding>
+                <element signature="e#150#161#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning_output.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="33" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="33" />
+              <folding>
+                <element signature="e#139#152#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_template_mgt_out.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/schema_file/data_cleaning_result_list.schema">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>read</find>
+      <find>get</find>
+      <find>post</find>
+      <find>E51DAD9D-45BE-442D-8C21-C2CC76650BC4</find>
+      <find>mange</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/testfiles/upload_file</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/testcases/universal_test/test_interfaceInfo.py" />
+        <option value="$PROJECT_DIR$/pages/mymodel/deletmodel.py" />
+        <option value="$PROJECT_DIR$/testcases/mymodel/test_findmodel.py" />
+        <option value="$PROJECT_DIR$/testcases/mymodel/test_mymodellist.py" />
+        <option value="$PROJECT_DIR$/testcases/universal_test/test_debug.py" />
+        <option value="$PROJECT_DIR$/pages/universal/modelList.py" />
+        <option value="$PROJECT_DIR$/pages/creatmodel/creatmodel.py" />
+        <option value="$PROJECT_DIR$/conftest.py" />
+        <option value="$PROJECT_DIR$/run_biaozhu_cases.py" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/uploadData.yaml" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/w.json" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/addDataSetDir.yaml" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/delete_file.json" />
+        <option value="$PROJECT_DIR$/pages/mymodel.py" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/addDataSetDir.json" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/data_list.json.py" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/data_list.json" />
+        <option value="$PROJECT_DIR$/pages/universal.py" />
+        <option value="$PROJECT_DIR$/common/getData.py" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/preview_data.json" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/rename_Data.json" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/move_file.json" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/update_jurisdiction.json" />
+        <option value="$PROJECT_DIR$/testcases/test_universal.py" />
+        <option value="$PROJECT_DIR$/run_cases.py" />
+        <option value="$PROJECT_DIR$/testcases/test_datamange.py" />
+        <option value="$PROJECT_DIR$/testcases/test_datamanage.py" />
+        <option value="$PROJECT_DIR$/testfiles/json_data/uploadData.json" />
+        <option value="$PROJECT_DIR$/common/getToken.py" />
+        <option value="$PROJECT_DIR$/pages/datamanage.py" />
+        <option value="$PROJECT_DIR$/common/logger.py" />
+        <option value="$PROJECT_DIR$/testfiles/config_file/config.ini" />
+        <option value="$PROJECT_DIR$/dd_push.py" />
+        <option value="$PROJECT_DIR$/testcases/test_mymodel.py" />
+        <option value="$PROJECT_DIR$/common/configHTTP.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/template_mgt.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testcases/test_template_mgt.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testfiles/config_file/config.ini" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/conftest.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/common/logger.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/template_mgt_ops.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/data_source_output.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/data_source_ops.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/template_mgt_output.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/data_cleaning_ops.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testcases/test_data_source_mgt.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/apm_modules/data_cleaning_output.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning_output.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning_ops.py" />
+        <option value="$PROJECT_DIR$/../apm_interface_test/testcases/test_template_mgt_out.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="59" />
+    <option name="y" value="23" />
+    <option name="width" value="1318" />
+    <option name="height" value="799" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zhiyu_interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apm_interface_test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhiyu_interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apm_interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="apm_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhiyu_interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apm_interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhiyu_interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apm_interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="testcases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhiyu_interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apm_interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="testfiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhiyu_interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apm_interface_test" type="462c0819:PsiDirectoryNode" />
+              <item name="testfiles" type="462c0819:PsiDirectoryNode" />
+              <item name="schema_file" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../apm_interface_test/testcases" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../apm_interface_test/testcases" />
+      <recent name="$PROJECT_DIR$/../apm_interface_test/apm_modules" />
+      <recent name="$PROJECT_DIR$/apm_modules" />
+      <recent name="$PROJECT_DIR$/common" />
+      <recent name="$PROJECT_DIR$/testfiles/upload_file" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/pages/universal" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.getToken">
+    <configuration name="getToken" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/Library/Frameworks/Python.framework/Versions/3.7/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/getToken.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for testcases.test_data_cleaning_output" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../apm_interface_test/testcases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testcases.test_data_cleaning_output&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for testcases.test_data_cleaning_output" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../apm_interface_test/testcases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testcases.test_data_cleaning_output&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for testcases.test_data_cleaning_output" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../apm_interface_test/testcases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testcases.test_data_cleaning_output&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_data_cleaning_output.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="apm_test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../apm_interface_test/testcases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning_output.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.getToken" />
+      <item itemvalue="Python tests.pytest for testcases.test_data_cleaning_output" />
+      <item itemvalue="Python tests.pytest for testcases.test_data_cleaning_output" />
+      <item itemvalue="Python tests.pytest in test_data_cleaning_output.py" />
+      <item itemvalue="Python tests.pytest for testcases.test_data_cleaning_output" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.getToken" />
+        <item itemvalue="Python tests.pytest for testcases.test_data_cleaning_output" />
+        <item itemvalue="Python tests.pytest in test_data_cleaning_output.py" />
+        <item itemvalue="Python tests.pytest for testcases.test_data_cleaning_output" />
+        <item itemvalue="Python tests.pytest for testcases.test_data_cleaning_output" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b50bc170-13a4-4260-89c7-b19177f393d6" name="Default" comment="" />
+      <created>1566876694181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566876694181</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_upload_file - 2019.11.08 at 19h 26m 16s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_upload_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_move_file - 2019.11.08 at 19h 26m 35s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_move_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_rename_data - 2019.11.08 at 19h 27m 27s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_rename_data" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_move_file - 2019.11.08 at 19h 27m 48s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_move_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_one_delete_file - 2019.11.08 at 19h 30m 41s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_one_delete_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_all_delete_file - 2019.11.08 at 19h 35m 38s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_all_delete_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_datamanage_py - 2019.11.08 at 19h 39m 22s.xml">
+      <configuration name="py.test in test_datamanage.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_upload_file - 2019.11.09 at 22h 06m 03s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_upload_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_upload_file - 2019.11.09 at 22h 06m 30s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_upload_file" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_datamanage_Test_DataManage_test_upload_file - 2019.11.09 at 22h 11m 13s.xml">
+      <configuration name="py.test for test_datamanage.Test_DataManage.test_upload_file" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="23" width="1318" height="799" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28681573" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3362573" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64124596" weight="0.39726028" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.38266796" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.37142858" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.35875404" side_tool="true" weight="0.36416748" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32911393" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19011815" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32947233" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32424536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32911393" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.37195715" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/apm_modules/universal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apm_modules/mymodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dd_push.py" />
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/uploadData.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/update_jurisdiction.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/rename_Data.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/preview_data.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/mymodellist.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/modellist.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/interfaceInfo.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/findmodel.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/deletmodel.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/delete_file.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/debug.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/data_list.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/urllib3/connectionpool.py" />
+    <entry file="file://$PROJECT_DIR$/run_cases.py" />
+    <entry file="file://$PROJECT_DIR$/testcases/test_universal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcases/test_mymodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="e#156#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/addDataSetDir.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/json_data/creatmodel.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/common/getToken.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+          <folding>
+            <element signature="e#141#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/config_file/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/common/getData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="e#150#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/common/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding>
+            <element signature="e#38#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/common/configHTTP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding>
+            <element signature="e#148#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/template_mgt_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#148#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/template_mgt_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/data_source_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/data_cleaning_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding>
+            <element signature="e#149#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/conftest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/data_source_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding>
+            <element signature="e#149#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_data_source_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_data_source_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#139#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/apm_modules/data_cleaning_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+          <folding>
+            <element signature="e#150#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/_pytest/mark/structures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5625">
+          <caret line="385" selection-start-line="385" selection-end-line="385" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="e#139#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_data_cleaning_output.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="e#139#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testcases/test_template_mgt_out.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../apm_interface_test/testfiles/schema_file/data_cleaning_result_list.schema">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
