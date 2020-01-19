@@ -23,6 +23,3 @@ class TestDataCleaningOutput():
     @allure.story("数据清洗")
     def test_data_cleaning_schema_check(self):
         pass
-
-    def test_01(self):
-        pass

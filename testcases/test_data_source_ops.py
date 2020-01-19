@@ -7,16 +7,14 @@
 @Version:1.0
 @Desc   :
 '''
-import pytest
-from apm_modules.template_mgt_ops import TemplateMgtOps
-from apm_modules.template_mgt_output import TemplateMgtOutput
+import pytest, allure
+from apm_modules.data_cleaning_ops import DataCleaningOps
 
 
 class TestDataSourceOutput():
 
     #测试本地上传文件
-    @pytest.mark.parametrize("filename,dataType,dataDirName",upload_parametrize)
-    @pytest.mark.run(order=1)
+    @pytest.mark.TemplateMgt
+    @allure.feature("模板列表—schema结构校验")
     def test_upload_file(self,filename,dataType,dataDirName):
-        json = TemplateMgt().upload_file(filename,dataType,dataDirName)
-        assert json['code'] == 200
+        pass
