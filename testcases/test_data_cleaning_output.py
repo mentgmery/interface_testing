@@ -16,7 +16,7 @@ from common.getData import GetData
 
 dc = DataCleaningOutput()
 data_cleaning_list_schema = GetData().read_schema_file('data_cleaning_list.schema')
-#data_cleaning_details_schema = GetData().read_schema_file('data_cleaning_details.schema')
+data_cleaning_details_schema = GetData().read_schema_file('data_cleaning_details.schema')
 
 
 @allure.feature("数据清洗—输出")
@@ -107,7 +107,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—实际size>page_size参数")
-    def test_data_cleaning_with_size_less_than_page_size(self):
+    def test_data_cleaning_details_with_size_less_than_page_size(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -124,7 +124,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无效的page num")
-    def test_data_cleaning_with_invalid_page_num(self):
+    def test_data_cleaning_details_with_invalid_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -141,7 +141,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无page num")
-    def test_data_cleaning_with_invalid_page_num(self):
+    def test_data_cleaning_details_with_invalid_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -163,8 +163,8 @@ class TestDataCleaningOutput():
         validate(json_data, schema=data_cleaning_details_schema)
 
     @pytest.mark.DataCleaning
-    @allure.story("数据清洗输出详情—无效case_id参数")
-    def test_data_cleaning_valid_case_id(self):
+    @allure.story("数据清洗输出详情—有效case_id参数")
+    def test_data_cleaning_details_by_valid_case_id(self):
         """
         验证数据源列表—有效case_id；
         校验状态码
@@ -175,7 +175,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出详情—case_id参数为空")
-    def test_data_cleaning_valid_case_id(self):
+    def test_data_cleaning_details_by_none_case_id(self):
         """
         验证数据源列表—有效case_id；
         校验状态码
@@ -186,7 +186,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出详情—无case_id参数")
-    def test_data_cleaning_valid_case_id(self):
+    def test_data_cleaning_details_without_case_id(self):
         """
         验证数据源列表—有效case_id；
         校验状态码
@@ -205,7 +205,7 @@ class TestDataCleaningOutput():
         json_data = dc.get_data_cleaning_details_by_invalid_data_id().json()
         code_value = json_data["code"]
         data_value = json_data["data"]
-        assert code_value == 9997
+        assert code_value == 3000
         assert data_value is None
 
     @pytest.mark.DataCleaning
@@ -244,5 +244,5 @@ class TestDataCleaningOutput():
         json_data = dc.get_data_cleaning_details_by_invalid_params().json()
         code_value = json_data["code"]
         data_value = json_data["data"]
-        assert code_value == 3000
+        assert code_value == 9997
         assert data_value is None

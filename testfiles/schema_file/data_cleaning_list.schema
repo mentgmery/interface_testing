@@ -1,98 +1,213 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/example.json",
+  "$id": "http://example.com/root.json",
   "type": "object",
   "title": "The Root Schema",
   "required": [
-    "checked",
-    "dimensions",
-    "id",
-    "name",
-    "price",
-    "tags"
+    "code",
+    "msg",
+    "data"
   ],
   "properties": {
-    "checked": {
-      "$id": "/properties/checked",
-      "type": "boolean",
-      "title": "The Checked Schema",
-      "default": false,
+    "code": {
+      "$id": "#/properties/code",
+      "type": "integer",
+      "title": "The Code Schema",
+      "default": 0,
       "examples": [
-        false
+        0
       ]
     },
-    "dimensions": {
-      "$id": "/properties/dimensions",
+    "msg": {
+      "$id": "#/properties/msg",
+      "type": "string",
+      "title": "The Msg Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "data": {
+      "$id": "#/properties/data",
       "type": "object",
-      "title": "The Dimensions Schema",
+      "title": "The Data Schema",
       "required": [
-        "width",
-        "height"
+        "count",
+        "totalPages",
+        "pageSize",
+        "currentPage",
+        "data"
       ],
       "properties": {
-        "width": {
-          "$id": "/properties/dimensions/properties/width",
+        "count": {
+          "$id": "#/properties/data/properties/count",
           "type": "integer",
-          "title": "The Width Schema",
-          "default": 0,
-          "examples": [
-            5
-          ]
-        },
-        "height": {
-          "$id": "/properties/dimensions/properties/height",
-          "type": "integer",
-          "title": "The Height Schema",
+          "title": "The Count Schema",
           "default": 0,
           "examples": [
             10
           ]
+        },
+        "totalPages": {
+          "$id": "#/properties/data/properties/totalPages",
+          "type": "integer",
+          "title": "The Totalpages Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "pageSize": {
+          "$id": "#/properties/data/properties/pageSize",
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0,
+          "examples": [
+            100
+          ]
+        },
+        "currentPage": {
+          "$id": "#/properties/data/properties/currentPage",
+          "type": "integer",
+          "title": "The Currentpage Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "data": {
+          "$id": "#/properties/data/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/data/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "id",
+              "name",
+              "task_id",
+              "output_id",
+              "status",
+              "update_time",
+              "create_time",
+              "case_id",
+              "is_imported",
+              "processStatus",
+              "line_size"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/data/properties/data/items/properties/id",
+                "type": "integer",
+                "title": "The Id Schema",
+                "default": 0,
+                "examples": [
+                  858075499
+                ]
+              },
+              "name": {
+                "$id": "#/properties/data/properties/data/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "数据集-资金时序的模板-xin.xlsx_Sheet1"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "task_id": {
+                "$id": "#/properties/data/properties/data/items/properties/task_id",
+                "type": "string",
+                "title": "The Task_id Schema",
+                "default": "",
+                "examples": [
+                  "712783605"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "output_id": {
+                "$id": "#/properties/data/properties/data/items/properties/output_id",
+                "type": "string",
+                "title": "The Output_id Schema",
+                "default": "",
+                "examples": [
+                  "B151A940-A60D-495B-B27B-9A004EF34A31-all"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "status": {
+                "$id": "#/properties/data/properties/data/items/properties/status",
+                "type": "integer",
+                "title": "The Status Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "update_time": {
+                "$id": "#/properties/data/properties/data/items/properties/update_time",
+                "type": "string",
+                "title": "The Update_time Schema",
+                "default": "",
+                "examples": [
+                  "2020-01-16 18:51:29"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "create_time": {
+                "$id": "#/properties/data/properties/data/items/properties/create_time",
+                "type": "string",
+                "title": "The Create_time Schema",
+                "default": "",
+                "examples": [
+                  "2020-01-16 18:51:29"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "case_id": {
+                "$id": "#/properties/data/properties/data/items/properties/case_id",
+                "type": "integer",
+                "title": "The Case_id Schema",
+                "default": 0,
+                "examples": [
+                  659939916
+                ]
+              },
+              "is_imported": {
+                "$id": "#/properties/data/properties/data/items/properties/is_imported",
+                "type": "integer",
+                "title": "The Is_imported Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "processStatus": {
+                "$id": "#/properties/data/properties/data/items/properties/processStatus",
+                "type": "string",
+                "title": "The Processstatus Schema",
+                "default": "",
+                "examples": [
+                  "SUCCEEDED"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "line_size": {
+                "$id": "#/properties/data/properties/data/items/properties/line_size",
+                "type": "string",
+                "title": "The Line_size Schema",
+                "default": "",
+                "examples": [
+                  "170"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
         }
-      }
-    },
-    "id": {
-      "$id": "/properties/id",
-      "type": "integer",
-      "title": "The Id Schema",
-      "default": 0,
-      "examples": [
-        1
-      ]
-    },
-    "name": {
-      "$id": "/properties/name",
-      "type": "string",
-      "title": "The Name Schema",
-      "default": "",
-      "examples": [
-        "A green door"
-      ],
-      "pattern": "^(.*)$"
-    },
-    "price": {
-      "$id": "/properties/price",
-      "type": "number",
-      "title": "The Price Schema",
-      "default": 0.0,
-      "examples": [
-        12.5
-      ]
-    },
-    "tags": {
-      "$id": "/properties/tags",
-      "type": "array",
-      "title": "The Tags Schema",
-      "items": {
-        "$id": "/properties/tags/items",
-        "type": "string",
-        "title": "The 0 Schema",
-        "default": "",
-        "examples": [
-          "home",
-          "green"
-        ],
-        "pattern": "^(.*)$"
       }
     }
   }
