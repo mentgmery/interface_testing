@@ -23,13 +23,13 @@ template_mgt_list_schema = GetData().read_schema_file('template_mgt_list.schema'
 class TestTemplateMgt():
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—schema结构校验")
+    @allure.story("模板列表—schema结构校验")
     def test_template_mgt_list_schema_check(self):
         json_data = tm.templateMgt_list_validity().json()
         validate(json_data,schema=template_mgt_list_schema)
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—正确的数据")
+    @allure.story("模板列表—正确的数据")
     def test_templateMgt_list_validity(self):
         """
         验证模板列表—正确数据返回值；
@@ -43,7 +43,7 @@ class TestTemplateMgt():
 
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—无效的caseid")
+    @allure.story("模板列表—无效的caseid")
     def test_templateMgt_list_invalid_caseid(self):
         """
         验证模板列表—无效的caseid；
@@ -54,7 +54,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—caseid为空")
+    @allure.story("模板列表—caseid为空")
     def test_templateMgt_list_null_caseid(self):
         """
         验证模板列表—空的caseid；
@@ -65,7 +65,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—无效的page")
+    @allure.story("模板列表—无效的page")
     def test_templateMgt_list_invalid_page(self):
         """
         验证模板列表—无效的page；
@@ -76,7 +76,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—空的page")
+    @allure.story("模板列表—空的page")
     def test_templateMgt_list_null_page(self):
         """
         验证模板列表—空的page；
@@ -87,7 +87,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—无效的pagesize")
+    @allure.story("模板列表—无效的pagesize")
     def test_templateMgt_list_invalid_pagesize(self):
         """
         验证模板列表—无效的pagesize；
@@ -98,7 +98,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板列表—空的pagesize")
+    @allure.story("模板列表—空的pagesize")
     def test_templateMgt_list_null_pagesize(self):
         """
         验证模板列表—空的pagesize；
@@ -115,7 +115,7 @@ class TestTemplateMgt():
     #     validate(json_data, schema=template_mgt_details_schema)
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板详情—正确的数据")
+    @allure.story("模板详情—正确的数据")
     def test_templateMgt_list_null_pagesize(self):
         """
         验证模板详情—正确数据返回值；
@@ -128,7 +128,7 @@ class TestTemplateMgt():
         #assert pagesize == 100
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板详情—无效的caseid")
+    @allure.story("模板详情—无效的caseid")
     def test_templateMgt_details_invalid_temid(self):
         """
         验证模板详情—无效的caseid；
@@ -139,7 +139,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板详情—空的caseid")
+    @allure.story("模板详情—空的caseid")
     def test_templateMgt_details_details_null_temid(self):
         """
         验证模板详情—空的caseid；
@@ -150,7 +150,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板详情—无效的caseid")
+    @allure.story("模板详情—无效的caseid")
     def test_templateMgt_details_details_invalid_caseid(self):
         """
         验证模板详情—无效的caseid；
@@ -161,7 +161,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板详情—空的caseid")
+    @allure.story("模板详情—空的caseid")
     def test_templateMgt_details_details_null_temid(self):
         """
         验证模板详情—空的caseid；

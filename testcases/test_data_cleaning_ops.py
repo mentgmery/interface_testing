@@ -11,11 +11,11 @@ import pytest
 import allure
 from apm_modules.data_cleaning_output import DataCleaningOutput
 
-
+@allure.feature("数据清洗动作")
 class TestDataCleaningOps():
 
     @pytest.mark.testENV
-    @allure.feature("schema结构校验")
+    @allure.story("schema结构校验")
     def data_cleaning_ops_schema_check(self):
         pass
 

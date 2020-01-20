@@ -17,10 +17,10 @@ from common.getData import GetData
 data_cleaning_list_schema = GetData().read_schema_file('data_cleaning_list.schema')
 
 
-@allure.feature("数据清洗")
+@allure.feature("数据清洗—输出")
 class TestDataCleaningOutput():
 
-    @allure.story("数据清洗")
+    @allure.story("数据清洗-schema校验")
     def test_data_cleaning_schema_check(self):
         pass
 
