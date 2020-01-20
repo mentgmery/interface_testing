@@ -78,10 +78,42 @@ class DataCleaningOutput():
         cf.set_headers(None)
         return cf.get()
 
+    def get_data_cleaning_list_size_less_than_page_size(self):
+        params_dict = {
+            "page_size": 7,
+            "page": 1,
+            "case_id": 659939916
+        }
+        cf.set_url(list_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_list_size_more_than_page_size(self):
+        params_dict = {
+            "page_size": 11,
+            "page": 1,
+            "case_id": 659939916
+        }
+        cf.set_url(list_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
     def get_data_cleaning_list_by_invalid_page_num(self):
         params_dict = {
             "page_size": 100,
             "page": -1,
+            "case_id": 659939916
+        }
+        cf.set_url(list_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_list_without_page_num(self):
+        params_dict = {
+            "page_size": 100,
             "case_id": 659939916
         }
         cf.set_url(list_url)
