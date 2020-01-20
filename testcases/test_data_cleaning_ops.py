@@ -9,15 +9,32 @@
 '''
 import pytest
 import allure
-from apm_modules.data_cleaning_output import DataCleaningOutput
+from apm_modules.data_cleaning_ops import DataCleaningOps
+
+
 
 @allure.feature("数据清洗动作")
+@pytest.mark.usefixtures('driver_setup')
 class TestDataCleaningOps():
 
-    @pytest.mark.testENV
-    @allure.story("schema结构校验")
-    def data_cleaning_ops_schema_check(self):
+    @pytest.mark.DataCleaning
+    @allure.story("数据清洗—动作—清洗")
+    def test_data_clean_ops(self):
+        """
+        验证访问清洗url，特定元素是否存在
+        """
         pass
+        # dc=DataCleaningOps(self.driver)
+        # url = dc.get_clean_url() # 获取清洗url
+        # assert dc.data_cleaning_ops(url) == True
 
-    def test_01(self):
+    @pytest.mark.DataCleaning
+    @allure.story("数据清洗—动作—跳过清洗")
+    def test_data_skip_clean_ops(self):
+        """
+        验证访问跳过清洗url，特定元素是否存在
+        """
         pass
+        # dc=DataCleaningOps(self.driver)
+        # url = dc.get_skip_clean_url() # 获取跳过清洗url
+        # assert dc.data_cleaning_ops(url) == True

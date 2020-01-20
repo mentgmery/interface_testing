@@ -11,23 +11,50 @@
 import json
 from common import configHTTP
 from common.getData import GetData
+from common.openbrowser import OpenURL
 
 cf = configHTTP.ConfigHttp()
 
+clean_url = "/dataetl"
 
-class DataCleaningOps():
+skip_clean_url = "/filemanagement"
 
-    '''
-    @Author : zhumeng
-    @Desc   :
-    @param  :
-    '''
-    def alter_data(self,dataType,dataDirName):
-        str_data_Type = uploadData_json['dataSetModelStr']
-        str_data_Type = str_data_Type[:13] + dataType + str_data_Type[17:]
-        uploadData_json['dataSetModelStr'] = str_data_Type[:79] + dataDirName + str_data_Type[-2:]
-        # str_data_Type = uploadData_json['dataSetModelStr']
-        # uploadData_json['dataSetModelStr']=str_data_Type.replace('实体识别',dataType)
-        # str_data_Type=uploadData_json['dataSetModelStr']
-        # str_data= str_data_Type.replace('接口自动化—生死疲劳已标注.txt', dataDirName)
-        return uploadData_json['dataSetModelStr']
+class DataCleaningOps(OpenURL):
+
+    def get_clean_url(self):
+        """获取清洗url
+        :return: 返回请求的url 示例：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx
+        """
+        dict_data = {
+          "case_id": "908651985",
+          "sDid" : "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+        }
+        cf.set_url(clean_url)
+        cf.set_params(dict_data)
+        cf.set_headers(None)
+        return cf.get().url
+
+    def get_skip_clean_url(self):
+        """获取清洗url
+        :return: 返回请求的url 示例：http://192.168.1.244:8881/filemanagement?case_id=xxxx&sDid=xxxx
+        """
+        dict_data = {
+          "case_id": "908651985",
+          "sDid" : "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+        }
+        cf.set_url(skip_clean_url)
+        cf.set_params(dict_data)
+        cf.set_headers(None)
+        return cf.get().url
+
+    def data_cleaning_ops(self,url):
+        """
+        数据源—动作，打开浏览器，访问url获取元素值
+        :param url: 动作的url地址 清洗/跳过清洗
+        :return: 特定元素的属性值。
+        """
+        self.driver.get(url)
+        #self.driver.page_source
+        #id_value=self.driver.find_element_by_id('su').get_attribute("value")#取什么值自己定位元素
+        visible=self.driver.find_element_by_id('su').is_displayed()# 判断元素是否存在
+        return visible

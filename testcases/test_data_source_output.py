@@ -35,6 +35,7 @@ class TestDataSourceOutput():
         """
         r_data=ds.datasource_list_validity()
         s_code = r_data.status_code
+        #print(r_data.url)
         assert s_code == 200
 
     @pytest.mark.DataSource
