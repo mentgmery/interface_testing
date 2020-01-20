@@ -32,6 +32,7 @@ class DataCleaningOutput():
         cf.set_url(dco_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
+        return cf.get()
 
     def get_data_cleaning_list_by_invalid_caseid(self):
         params_dict = {
@@ -42,6 +43,7 @@ class DataCleaningOutput():
         cf.set_url(dco_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
+        return cf.get()
 
     def get_data_cleaning_list_by_none_caseid(self):
         params_dict = {
@@ -52,16 +54,39 @@ class DataCleaningOutput():
         cf.set_url(dco_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
+        return cf.get()
 
-    def get_data_cleaning_list_by_invalid_page_num(self):
+    def get_data_cleaning_list_by_no_caseid(self):
         params_dict = {
             "page_size": 100,
-            "page": 0,
+            "page": 1
+        }
+        cf.set_url(dco_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_list_by_valid_page_num(self):
+        params_dict = {
+            "page_size": 20,
+            "page": 2,
             "case_id": 659939916
         }
         cf.set_url(dco_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_list_by_invalid_page_num(self):
+        params_dict = {
+            "page_size": 100,
+            "page": -1,
+            "case_id": 659939916
+        }
+        cf.set_url(dco_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
 
     def get_data_cleaning_list_by_invalid_page_size(self):
         params_dict = {
@@ -72,6 +97,7 @@ class DataCleaningOutput():
         cf.set_url(dco_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
+        return cf.get()
 
     def get_data_cleaning_list_by_none_page_size(self):
         params_dict = {
@@ -82,3 +108,4 @@ class DataCleaningOutput():
         cf.set_url(dco_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
+        return cf.get()
