@@ -47,14 +47,17 @@ class DataCleaningOps(OpenURL):
         cf.set_headers(None)
         return cf.get().url
 
-    def data_cleaning_ops(self,url):
+    def data_cleaning_ops(self,url,requiredDom):
         """
         数据源—动作，打开浏览器，访问url获取元素值
         :param url: 动作的url地址 清洗/跳过清洗
+        :param requiredDom: Dom树中id值
+                清洗：'__data_source_etl'，
+                跳过清洗：'__data_source_jumpetl'
         :return: 特定元素的属性值。
         """
         self.driver.get(url)
         #self.driver.page_source
         #id_value=self.driver.find_element_by_id('su').get_attribute("value")#取什么值自己定位元素
-        visible=self.driver.find_element_by_id('su').is_displayed()# 判断元素是否存在
+        visible=self.driver.find_element_by_id(requiredDom).is_displayed()# 判断元素是否存在
         return visible
