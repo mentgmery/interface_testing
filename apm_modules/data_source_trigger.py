@@ -18,32 +18,6 @@ cf = configHTTP.ConfigHttp()
 #dataSource_url = "xxxxx"
 dataSource_url = "/api/template"
 
-clean_data={
-        "clean": {
-            "name": "清洗",
-            "alias": "clean",
-            "type": "page",
-            "paramsdata": {
-                "case_id" : "908651985",
-                "sDid" : "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
-        },
-        "url": "http://admin.gongan.corp.elensdata.com/dataetl",
-        "desc": '跳转到数据清洗页面，弹出表头选定的弹窗'
-      }
-    }
-
-skip_clean_data = {
-        "name": "跳过清洗",
-        "alias": "skip-clean",
-        "type": "page",
-        "paramsdata": {
-          "case_id": '908651985',
-          "sDid": 'B338F6FE-8F93-4037-A99A-D36EE67CA1E6'
-        },
-        "url": "http://admin.gongan.corp.elensdata.com/filemanagement",
-        "desc": "跳转到数据清洗页面，弹出跳过清洗的弹窗"
-      }
-
 class DataSourceTrigger(OpenURL):
 
     def datasource_trigger_url(self,url,requiredDom):
@@ -61,20 +35,32 @@ class DataSourceTrigger(OpenURL):
         #visible = self.driver.find_element_by_id('su').is_displayed() # 取什么值自己定位元素
         return value
 
-    def get_datasource_trigger_clean_url(self):
+    def get_datasource_trigger_clean_url(self,data):
         """
         获取数据源触发器—清洗—url
-        Returns: 返回get的url 示例：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_CLEAN=xxxx
+        Returns: 返回get的url 示例：
+                非空：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_CLEAN=xxxx
+                空：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_CLEAN={}
         """
         clean_url=DataCleaningOps(self.driver).get_clean_url() # 获取数据清洗动作—清洗url
-        url = clean_url + '&ENV_ACTION_CLEAN=' + str(clean_data)
-        return url
+        if data is None:
+            url = clean_url + '&ENV_ACTION_CLEAN={}'
+            return url
+        else:
+            url = clean_url + '&ENV_ACTION_CLEAN=' + str(data)
+            return url
 
-    def get_datasource_trigger_skip_clean_url(self):
+    def get_datasource_trigger_skip_clean_url(self,data):
         """
-        获取数据源触发器—清洗—url
-        Returns: 返回get的url 示例：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_CLEAN=xxxx
+        获取数据源触发器—跳过清洗—url
+        Returns: 返回get的url 示例：
+                非空：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_SKIP_CLEAN=xxxx
+                空：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_SKIP_CLEAN={}
         """
         skip_clean_url=DataCleaningOps(self.driver).get_skip_clean_url() # 获取数据清洗动作—跳过清洗url
-        url = skip_clean_url + '&ENV_ACTION_SKIP_CLEAN=' + str(skip_clean_data)
-        return url
+        if data is None:
+            url = skip_clean_url + '&ENV_ACTION_SKIP_CLEAN={}'
+            return url
+        else:
+            url = skip_clean_url + '&ENV_ACTION_SKIP_CLEAN=' + str(skip_clean_data)
+            return url
