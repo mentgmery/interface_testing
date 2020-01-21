@@ -17,7 +17,6 @@ class TestDataSource_OPS():
     @pytest.mark.DataSource
     @allure.story("数据源—动作—新增数据")
     def test_data_source_ops(self):
-        pass
-        # ds=DataSourceOps(self.driver)
-        # url = ds.get_datasource_add_data_url() # 获取数据源url
-        # assert ds.datasource_add_data(url) == True
+        ds=DataSourceOps(self.driver)
+        url = ds.get_datasource_add_data_url() # 获取数据源url
+        assert ds.datasource_add_data(url,'__data_source_jumpetl') == True

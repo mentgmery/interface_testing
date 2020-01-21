@@ -16,6 +16,8 @@ from apm_modules.data_cleaning_trigger import DataCleaningTrigger
 @pytest.mark.usefixtures('driver_setup')
 class TestDataCleaningTrigger():
 
+    @pytest.mark.DataCleaning
+    @allure.story("数据清洗—新增数据—触发器")
     def test_datacleaning_trigger_url(self):
         """
                 验证数据源清洗触发器，是否存在id为__data_source_jumpetl元素

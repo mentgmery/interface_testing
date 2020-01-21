@@ -29,14 +29,16 @@ class DataSourceOps(OpenURL):
         cf.set_headers(None)
         return cf.get().url
 
-    def datasource_add_data(self,url):
+    def datasource_add_data(self,url,requiredDom):
         """
         数据源—动作，打开浏览器，访问url获取元素值
         :param url: 动作的url地址
+        :param requiredDom: Dom树中id值
+                新增数据：'__data_source_jumpetl'
         :return: 特定元素的属性值。
         """
         self.driver.get(url)
         #self.driver.page_source
         #id_value=self.driver.find_element_by_id('su').get_attribute("value")#取什么值自己定位元素
-        visible=self.driver.find_element_by_id('su').is_displayed()# 判断元素是否存在
+        visible=self.driver.find_element_by_id(requiredDom).is_displayed()# 判断元素是否存在
         return visible
