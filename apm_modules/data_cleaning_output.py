@@ -145,7 +145,7 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_jsonschema(self):
         params_dict = {
-            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
             "case_id": "442791611"
         }
         cf.set_url(details_url)
@@ -155,7 +155,7 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_by_invalid_caseid(self):
         params_dict = {
-            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
             "case_id": "111111"
         }
         cf.set_url(details_url)
@@ -165,7 +165,7 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_without_no_caseid(self):
         params_dict = {
-            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow"
+            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow"
         }
         cf.set_url(details_url)
         cf.set_params(params_dict)
@@ -174,7 +174,7 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_by_none_caseid(self):
         params_dict = {
-            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
             "case_id": ""
         }
         cf.set_url(details_url)
@@ -184,7 +184,7 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_by_invalid_data_id(self):
         params_dict = {
-            "data_id": "111111",
+            "id": "111111",
             "case_id": "442791611"
         }
         cf.set_url(details_url)
@@ -203,7 +203,7 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_by_none_data_id(self):
         params_dict = {
-            "data_id": "",
+            "id": "",
             "case_id": "442791611"
         }
         cf.set_url(details_url)
@@ -213,8 +213,8 @@ class DataCleaningOutput():
 
     def get_data_cleaning_details_by_invalid_params(self):
         params_dict = {
-            "id": "11111",
-            "value": "111111"
+            "xxx": "11111",
+            "yyy": "111111"
         }
         cf.set_url(details_url)
         cf.set_params(params_dict)
