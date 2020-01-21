@@ -15,7 +15,8 @@ from common.getData import GetData
 ds = DataSourceOutput()
 
 datasource_list_schema = GetData().read_schema_file('data_source_list.schema')
-#datasource_details_schema = GetData().read_schema_file('datasource_details.schema')
+datasource_details_schema = GetData().read_schema_file('data_source_details.schema')
+
 @allure.feature("数据源—输出")
 class TestDataSourceOutput():
 
@@ -142,11 +143,11 @@ class TestDataSourceOutput():
         assert s_code == 200
         assert code != 0
 
-    # @pytest.mark.DataSource
-    # @allure.story("数据源详情—schema结构校验")
-    # def test_datasource_details_schema_check(self):
-    #     json_data=ds.datasource_details_validity().json()
-    #     validate(json_data,schema=datasource_details_schema)
+    @pytest.mark.DataSource
+    @allure.story("数据源详情—schema结构校验")
+    def test_datasource_details_schema_check(self):
+        json_data=ds.datasource_details_validity().json()
+        validate(json_data,schema=datasource_details_schema)
 
     @pytest.mark.DataSource
     @allure.story("数据源详情—正确数据")
@@ -200,7 +201,7 @@ class TestDataSourceOutput():
 
     @pytest.mark.DataSource
     @allure.story("数据源详情—空的data_id")
-    def test_datasource_details_invalid_data_id(self):
+    def test_datasource_details_null_data_id(self):
         """
         验证数据源详情—空的data_id；
         校验状态码和code码

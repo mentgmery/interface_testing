@@ -17,7 +17,7 @@ tm=TemplateMgtOutput()
 
 template_mgt_list_schema = GetData().read_schema_file('template_mgt_list.schema')
 
-#template_mgt_details_schema = GetData().read_schema_file('template_mgt_details.schema')
+template_mgt_details_schema = GetData().read_schema_file('template_mgt_details.schema')
 
 @allure.feature("模板管理—输出")
 class TestTemplateMgt():
@@ -108,27 +108,27 @@ class TestTemplateMgt():
         s_code=r_data.status_code
         assert s_code == 200
 
-    # @pytest.mark.TemplateMgt
-    # @allure.feature("模板详情—schema结构校验")
-    # def test_templateMgt_details_schema(self):
-    #     json_data = tm.templateMgt_details_validity().json()
-    #     validate(json_data, schema=template_mgt_details_schema)
+    @pytest.mark.TemplateMgt
+    @allure.feature("模板详情—schema结构校验")
+    def test_templateMgt_details_schema(self):
+        json_data = tm.templateMgt_details_validity().json()
+        validate(json_data, schema=template_mgt_details_schema)
 
     @pytest.mark.TemplateMgt
     @allure.story("模板详情—正确的数据")
-    def test_templateMgt_list_null_pagesize(self):
+    def test_templateMgt_details_pagesize(self):
         """
         验证模板详情—正确数据返回值；
         校验状态码，其他数据等接口出来再定。
         """
-        r_data = tm.templateMgt_list_validity()
+        r_data = tm.templateMgt_details_validity()
         s_code=r_data.status_code
         #pagesize = r_data.json()['data']['pageSize']
         assert s_code == 200
         #assert pagesize == 100
 
     @pytest.mark.TemplateMgt
-    @allure.story("模板详情—无效的caseid")
+    @allure.story("模板详情—无效的temid")
     def test_templateMgt_details_invalid_temid(self):
         """
         验证模板详情—无效的caseid；
@@ -139,7 +139,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.story("模板详情—空的caseid")
+    @allure.story("模板详情—空的temid")
     def test_templateMgt_details_details_null_temid(self):
         """
         验证模板详情—空的caseid；
@@ -162,11 +162,11 @@ class TestTemplateMgt():
 
     @pytest.mark.TemplateMgt
     @allure.story("模板详情—空的caseid")
-    def test_templateMgt_details_details_null_temid(self):
+    def test_templateMgt_details_details_null_caseid(self):
         """
         验证模板详情—空的caseid；
         校验状态码，其他数据等接口出来再定。
         """
-        r_data = tm.templateMgt_details_null_temid()
+        r_data = tm.templateMgt_details_null_caseid()
         s_code=r_data.status_code
         assert s_code == 200
