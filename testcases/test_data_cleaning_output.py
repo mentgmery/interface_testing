@@ -37,9 +37,7 @@ class TestDataCleaningOutput():
         """
         json_data = dc.get_data_cleaning_list_jsonschema().json()
         data_value = json_data["data"]["data"]
-        print("*************")
-        print(data_value)
-        #assert len(data_value)
+        assert len(data_value)
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无效case_id参数")
