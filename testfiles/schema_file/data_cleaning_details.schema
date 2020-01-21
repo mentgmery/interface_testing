@@ -1,0 +1,99 @@
+ 1 {
+ 2   "definitions": {},
+ 3   "$schema": "http://json-schema.org/draft-07/schema#",
+ 4   "$id": "http://example.com/root.json",
+ 5   "type": "object",
+ 6   "title": "The Root Schema",
+ 7   "required": [
+ 8     "checked",
+ 9     "dimensions",
+10     "id",
+11     "name",
+12     "price",
+13     "tags"
+14   ],
+15   "properties": {
+16     "checked": {
+17       "$id": "#/properties/checked",
+18       "type": "boolean",
+19       "title": "The Checked Schema",
+20       "default": false,
+21       "examples": [
+22         false
+23       ]
+24     },
+25     "dimensions": {
+26       "$id": "#/properties/dimensions",
+27       "type": "object",
+28       "title": "The Dimensions Schema",
+29       "required": [
+30         "width",
+31         "height"
+32       ],
+33       "properties": {
+34         "width": {
+35           "$id": "#/properties/dimensions/properties/width",
+36           "type": "integer",
+37           "title": "The Width Schema",
+38           "default": 0,
+39           "examples": [
+40             5
+41           ]
+42         },
+43         "height": {
+44           "$id": "#/properties/dimensions/properties/height",
+45           "type": "integer",
+46           "title": "The Height Schema",
+47           "default": 0,
+48           "examples": [
+49             10
+50           ]
+51         }
+52       }
+53     },
+54     "id": {
+55       "$id": "#/properties/id",
+56       "type": "integer",
+57       "title": "The Id Schema",
+58       "default": 0,
+59       "examples": [
+60         1
+61       ]
+62     },
+63     "name": {
+64       "$id": "#/properties/name",
+65       "type": "string",
+66       "title": "The Name Schema",
+67       "default": "",
+68       "examples": [
+69         "A green door"
+70       ],
+71       "pattern": "^(.*)$"
+72     },
+73     "price": {
+74       "$id": "#/properties/price",
+75       "type": "number",
+76       "title": "The Price Schema",
+77       "default": 0.0,
+78       "examples": [
+79         12.5
+80       ]
+81     },
+82     "tags": {
+83       "$id": "#/properties/tags",
+84       "type": "array",
+85       "title": "The Tags Schema",
+86       "items": {
+87         "$id": "#/properties/tags/items",
+88         "type": "string",
+89         "title": "The Items Schema",
+90         "default": "",
+91         "examples": [
+92           "home",
+93           "green"
+94         ],
+95         "pattern": "^(.*)$"
+96       }
+97     }
+98   }
+99 }

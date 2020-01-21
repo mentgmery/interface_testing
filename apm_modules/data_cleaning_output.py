@@ -13,7 +13,8 @@ from common import configHTTP
 from common.getData import GetData
 
 cf = configHTTP.ConfigHttp()
-dco_url = "/api/dataset"
+list_url = "/api/dataset"
+details_url = "/lensData/lensData/getResultSet"
 
 
 class DataCleaningOutput():
@@ -29,7 +30,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": 659939916
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -40,7 +41,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": 111111
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -51,7 +52,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": None
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -61,7 +62,7 @@ class DataCleaningOutput():
             "page_size": 100,
             "page": 1
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -72,7 +73,7 @@ class DataCleaningOutput():
             "page": 2,
             "case_id": 659939916
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -83,7 +84,7 @@ class DataCleaningOutput():
             "page": -1,
             "case_id": 659939916
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -94,7 +95,7 @@ class DataCleaningOutput():
             "page": 0,
             "case_id": 659939916
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
@@ -105,7 +106,85 @@ class DataCleaningOutput():
             "page": 0,
             "case_id": 659939916
         }
-        cf.set_url(dco_url)
+        cf.set_url(list_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_jsonschema(self):
+        params_dict = {
+            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "case_id": "442791611"
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_by_invalid_caseid(self):
+        params_dict = {
+            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "case_id": "111111"
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_without_no_caseid(self):
+        params_dict = {
+            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow"
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_by_none_caseid(self):
+        params_dict = {
+            "data_id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "case_id": ""
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_by_invalid_data_id(self):
+        params_dict = {
+            "data_id": "111111",
+            "case_id": "442791611"
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_without_data_id(self):
+        params_dict = {
+            "case_id": "442791611"
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_by_none_data_id(self):
+        params_dict = {
+            "data_id": "",
+            "case_id": "442791611"
+        }
+        cf.set_url(details_url)
+        cf.set_params(params_dict)
+        cf.set_headers(None)
+        return cf.get()
+
+    def get_data_cleaning_details_by_invalid_params(self):
+        params_dict = {
+            "id": "11111",
+            "value": "111111"
+        }
+        cf.set_url(details_url)
         cf.set_params(params_dict)
         cf.set_headers(None)
         return cf.get()
