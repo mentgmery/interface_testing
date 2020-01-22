@@ -9,15 +9,16 @@
 '''
 
 import json
-from common import configHTTP
-from common.getData import GetData
+from common.base_page import BasePage
 
-cf = configHTTP.ConfigHttp()
+
+#cf = configHTTP.ConfigHttp()
 list_url = "/api/dataset"
 details_url = "/lensData/lensData/getResultSet"
+headers = None
 
 
-class DataCleaningOutput():
+class DataCleaningOutput(BasePage):
 
     '''
     @Author : zhumeng
@@ -30,10 +31,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_invalid_caseid(self):
         params_dict = {
@@ -41,10 +39,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": 111111
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_none_caseid(self):
         params_dict = {
@@ -52,20 +47,14 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": None
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_no_caseid(self):
         params_dict = {
             "page_size": 100,
             "page": 1
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_valid_page_num(self):
         params_dict = {
@@ -73,10 +62,7 @@ class DataCleaningOutput():
             "page": 2,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_size_less_than_page_size(self):
         params_dict = {
@@ -84,10 +70,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_size_more_than_page_size(self):
         params_dict = {
@@ -95,10 +78,7 @@ class DataCleaningOutput():
             "page": 1,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_invalid_page_num(self):
         params_dict = {
@@ -106,20 +86,14 @@ class DataCleaningOutput():
             "page": -1,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_without_page_num(self):
         params_dict = {
             "page_size": 100,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_invalid_page_size(self):
         params_dict = {
@@ -127,10 +101,7 @@ class DataCleaningOutput():
             "page": 0,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_list_by_none_page_size(self):
         params_dict = {
@@ -138,85 +109,58 @@ class DataCleaningOutput():
             "page": 0,
             "case_id": 659939916
         }
-        cf.set_url(list_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(list_url, params_dict, headers)
 
     def get_data_cleaning_details_jsonschema(self):
         params_dict = {
             "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
             "case_id": "442791611"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_by_invalid_caseid(self):
         params_dict = {
             "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
             "case_id": "111111"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_without_no_caseid(self):
         params_dict = {
             "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_by_none_caseid(self):
         params_dict = {
             "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
             "case_id": ""
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_by_invalid_data_id(self):
         params_dict = {
             "id": "111111",
             "case_id": "442791611"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_without_data_id(self):
         params_dict = {
             "case_id": "442791611"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_by_none_data_id(self):
         params_dict = {
             "id": "",
             "case_id": "442791611"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
 
     def get_data_cleaning_details_by_invalid_params(self):
         params_dict = {
             "xxx": "11111",
             "yyy": "111111"
         }
-        cf.set_url(details_url)
-        cf.set_params(params_dict)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(details_url, params_dict, headers)
