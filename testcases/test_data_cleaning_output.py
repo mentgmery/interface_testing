@@ -141,7 +141,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无page num")
-    def test_data_cleaning_details_with_invalid_page_num(self):
+    def test_data_cleaning_details_without_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
