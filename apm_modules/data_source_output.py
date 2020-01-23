@@ -9,13 +9,14 @@
 '''
 
 import json
-from common import configHTTP
-
-cf = configHTTP.ConfigHttp()
+from common.base_page import BasePage
 
 data_source_url = "/api/data_source"
+data_source_details_url = "/lensData/lensData/getRawData"
+headers = None
 
-class DataSourceOutput():
+
+class DataSourceOutput(BasePage):
 
     def datasource_list_validity(self):
         """
@@ -28,10 +29,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_invalid_q_type(self):
         """
@@ -44,10 +42,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_null_q_type(self):
         """
@@ -60,10 +55,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_invalid_page_size(self):
         """
@@ -76,10 +68,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
 
     def datasource_list_null_page_size(self):
@@ -93,10 +82,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_invalid_page(self):
         """
@@ -109,10 +95,7 @@ class DataSourceOutput():
             "page" : -1,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_null_page(self):
         """
@@ -125,10 +108,7 @@ class DataSourceOutput():
             "page" : None,
             "case_id" : '598756534'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_invalid_case_id(self):
         """
@@ -141,10 +121,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : '2323xx'
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_list_null_case_id(self):
         """
@@ -157,10 +134,7 @@ class DataSourceOutput():
             "page" : 1,
             "case_id" : ''
                     }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_url, dict_data, headers)
 
     def datasource_details_validity(self):
         """
@@ -168,13 +142,10 @@ class DataSourceOutput():
             Returns: get请求的结果
         """
         dict_data =  {
-                "data_id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
+                "id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
                 "case_id" : '442791611'
                 }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_details_url, dict_data, headers)
 
 
     def datasource_details_invalid_data_id(self):
@@ -183,13 +154,10 @@ class DataSourceOutput():
             Returns: get请求的结果
         """
         dict_data =  {
-                "data_id" : 'xxxjejl1',
+                "id" : 'xxxjejl1',
                 "case_id" : '442791611'
                 }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_details_url, dict_data, headers)
 
     def datasource_details_null_data_id(self):
         """
@@ -197,13 +165,10 @@ class DataSourceOutput():
             Returns: get请求的结果
         """
         dict_data =  {
-                "data_id" :  '',
+                "id" :  '',
                 "case_id" : '442791611'
                 }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_details_url, dict_data, headers)
 
     def datasource_details_invalid_case_id(self):
         """
@@ -211,13 +176,10 @@ class DataSourceOutput():
             Returns: get请求的结果
         """
         dict_data =  {
-                "data_id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
+                "id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
                 "case_id" : 'j4irieoro'
                 }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_details_url, dict_data, headers)
 
     def datasource_details_null_case_id(self):
         """
@@ -225,10 +187,7 @@ class DataSourceOutput():
             Returns: get请求的结果
         """
         dict_data =  {
-                "data_id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
+                "id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
                 "case_id" : ''
                 }
-        cf.set_url(data_source_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get()
+        return self.get_http_response(data_source_details_url, dict_data, headers)

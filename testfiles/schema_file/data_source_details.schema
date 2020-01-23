@@ -1,99 +1,54 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/example.json",
+  "$id": "http://example.com/root.json",
   "type": "object",
   "title": "The Root Schema",
   "required": [
-    "checked",
-    "dimensions",
-    "id",
-    "name",
-    "price",
-    "tags"
+    "code",
+    "msg",
+    "showMsg",
+    "data"
   ],
   "properties": {
-    "checked": {
-      "$id": "/properties/checked",
-      "type": "boolean",
-      "title": "The Checked Schema",
-      "default": false,
-      "examples": [
-        false
-      ]
-    },
-    "dimensions": {
-      "$id": "/properties/dimensions",
-      "type": "object",
-      "title": "The Dimensions Schema",
-      "required": [
-        "width",
-        "height"
-      ],
-      "properties": {
-        "width": {
-          "$id": "/properties/dimensions/properties/width",
-          "type": "integer",
-          "title": "The Width Schema",
-          "default": 0,
-          "examples": [
-            5
-          ]
-        },
-        "height": {
-          "$id": "/properties/dimensions/properties/height",
-          "type": "integer",
-          "title": "The Height Schema",
-          "default": 0,
-          "examples": [
-            10
-          ]
-        }
-      }
-    },
-    "id": {
-      "$id": "/properties/id",
+    "code": {
+      "$id": "#/properties/code",
       "type": "integer",
-      "title": "The Id Schema",
+      "title": "The Code Schema",
       "default": 0,
       "examples": [
-        1
+        0
       ]
     },
-    "name": {
-      "$id": "/properties/name",
+    "msg": {
+      "$id": "#/properties/msg",
       "type": "string",
-      "title": "The Name Schema",
+      "title": "The Msg Schema",
       "default": "",
       "examples": [
-        "A green door"
+        "成功"
       ],
       "pattern": "^(.*)$"
     },
-    "price": {
-      "$id": "/properties/price",
-      "type": "number",
-      "title": "The Price Schema",
-      "default": 0.0,
+    "showMsg": {
+      "$id": "#/properties/showMsg",
+      "type": "string",
+      "title": "The Showmsg Schema",
+      "default": "",
       "examples": [
-        12.5
-      ]
+        "成功"
+      ],
+      "pattern": "^(.*)$"
     },
-    "tags": {
-      "$id": "/properties/tags",
-      "type": "array",
-      "title": "The Tags Schema",
-      "items": {
-        "$id": "/properties/tags/items",
-        "type": "string",
-        "title": "The 0 Schema",
-        "default": "",
-        "examples": [
-          "home",
-          "green"
-        ],
-        "pattern": "^(.*)$"
-      }
+    "data": {
+      "$id": "#/properties/data",
+      "type": "string",
+      "title": "The Data Schema",
+      "default": "",
+      "examples": [
+        "[{\"data\":\"1^^^交易卡号^^^交易户名^^^交易证件号^^^交易日期^^^交易金额^^^收付标志^^^对手帐号^^^对手户名\"},{\"data\":\"2^^^6226190300916768^^^郑棠心^^^ ^^^2019-01-07 16:00^^^1000.050000^^^进^^^6228481241234444^^^袁耀强\"},{\"data\":\"3^^^6226190300916768^^^郑棠心^^^ ^^^2019-02-07 16:00^^^2000.000000^^^进^^^6228481241235555^^^钟伟\"},{\"data\":\"4^^^6226190300912222^^^郑棠心^^^ ^^^2019-02-08 16:00^^^1500.000000^^^出^^^6226190300916768^^^郑棠心\"},{\"data\":\"5^^^6226190300911111^^^郑棠心^^^ ^^^2019-02-08 17:00^^^10000.000000^^^出^^^6228480128290135473^^^苏大强\"},{\"data\":\"6^^^6226190300916712^^^郑棠心^^^ ^^^2019-01-09 16:00^^^100.000000^^^出^^^6212436234647712^^^钟伟\"},{\"data\":\"7^^^6228480128290135473^^^苏大强^^^ ^^^2019-02-08 17:00^^^10000.000000^^^进^^^6226190300911111^^^郑棠心\"},{\"data\":\"8^^^6228480128290135111^^^苏大强^^^ ^^^2019-01-10 16:00^^^2000.000000^^^出^^^6228481241235555^^^钟伟\"},{\"data\":\"9^^^6228480128290135111^^^苏大强^^^ ^^^2019-01-12 16:00^^^5000.000000^^^出^^^6228481241231212^^^蔡根花\"}]"
+      ],
+      "pattern": "^(.*)$"
     }
   }
 }
