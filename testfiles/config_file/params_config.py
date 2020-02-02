@@ -1,15 +1,22 @@
 # !/usr/bin/env python3
 #coding=utf-8
 '''
-@File   :data_cleaning_output.py
+@File   :params_config.py
 @Author :zhumeng
-@Date   :2020/1/7  16:20
+@Date   :2020/2/3  16:03
 @Version:1.0
-@Desc   : 数据清洗输出
+@Desc   : 参数配置
 '''
 
 import json
 from common.base_page import BasePage
+
+
+# 所有api url
+dc_output_list_url = "/api/dataset"
+dc_output_details_url = "/lensData/lensData/getResultSet"
+dc_output_list_headers = None
+dc_output_details_headers = None
 
 
 # 数据源清洗列表参数
@@ -125,4 +132,3 @@ dc_output_details_by_invalid_params = {
             "xxx": "11111",
             "yyy": "111111"
         }
-
