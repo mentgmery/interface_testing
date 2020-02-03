@@ -69,7 +69,7 @@ class TestDataCleaningOutput():
         验证数据源列表—空case_id；
         校验状态码
         """
-        json_data = dc.get_data_cleaning_list_by_none_caseid().json()
+        json_data = dc.get_data_cleaning_list_by_no_caseid().json()
         data_value = json_data["data"]["data"]
         assert len(data_value)
 
