@@ -12,6 +12,13 @@ import json
 from common.base_page import BasePage
 
 
+# 所有api url
+dc_output_list_url = "/api/dataset"
+dc_output_details_url = "/lensData/lensData/getResultSet"
+dc_output_list_headers = None
+dc_output_details_headers = None
+
+
 # 数据源清洗列表参数
 dc_output_list_schema_check_params = {
             "page_size": 100,
@@ -125,4 +132,3 @@ dc_output_details_by_invalid_params = {
             "xxx": "11111",
             "yyy": "111111"
         }
-
