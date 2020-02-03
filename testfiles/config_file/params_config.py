@@ -1,11 +1,11 @@
 # !/usr/bin/env python3
 #coding=utf-8
 '''
-@File   :data_cleaning_output.py
+@File   :params_config.py
 @Author :zhumeng
-@Date   :2020/1/7  16:20
+@Date   :2020/2/3  16:03
 @Version:1.0
-@Desc   : 数据清洗输出
+@Desc   : 参数配置
 '''
 
 import json
