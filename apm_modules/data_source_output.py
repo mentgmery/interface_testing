@@ -10,11 +10,11 @@
 
 import json
 from common.base_page import BasePage
+from testfiles.config_file import params_config
 
 data_source_url = "/api/data_source"
 data_source_details_url = "/lensData/lensData/getRawData"
 headers = None
-
 
 class DataSourceOutput(BasePage):
 
@@ -23,129 +23,80 @@ class DataSourceOutput(BasePage):
             正向的模板管理—列表—输出,请求值均正常。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : 10,
-            "page" : 1,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_validity_params
+        return self.get_http_response(params_config.ds_output_list_url, params_dict, params_config.ds_output_list_headers)
 
     def datasource_list_invalid_q_type(self):
         """
             无效的数据源—列表—输出,错误的q_type。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : -1,
-            "page_size" : 10,
-            "page" : 1,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_invalid_params
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_null_q_type(self):
         """
             无效的数据源—列表—输出,q_type为空。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : None,
-            "page_size" : 10,
-            "page" : 1,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_null_q_type
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_invalid_page_size(self):
         """
             无效的数据源—列表—输出,错误的page_size。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : -1,
-            "page" : 1,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
-
+        params_dict = params_config.ds_output_list_invalid_page_size
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_null_page_size(self):
         """
             无效的数据源—列表—输出,page_size为空。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : None,
-            "page" : 1,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_null_page_size
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_invalid_page(self):
         """
             无效的数据源—列表—输出,错误的page。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : 10,
-            "page" : -1,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_invalid_page
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_null_page(self):
         """
             无效的数据源—列表—输出,空的page。
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : 10,
-            "page" : None,
-            "case_id" : '598756534'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_null_page
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_invalid_case_id(self):
         """
             无效的数据源—列表—输出,错误的case_id
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : 10,
-            "page" : 1,
-            "case_id" : '2323xx'
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_invalid_case_id
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_list_null_case_id(self):
         """
             无效的数据源—列表—输出,空的case_id
             Returns: get请求的结果
         """
-        dict_data = {
-            "q_type" : 0,
-            "page_size" : 10,
-            "page" : 1,
-            "case_id" : ''
-                    }
-        return self.get_http_response(data_source_url, dict_data, headers)
+        params_dict = params_config.ds_output_list_null_case_id
+        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
 
     def datasource_details_validity(self):
         """
             正向的模板管理—详情—输出,请求值均正常。
             Returns: get请求的结果
         """
-        dict_data =  {
-                "id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
-                "case_id" : '442791611'
-                }
-        return self.get_http_response(data_source_details_url, dict_data, headers)
+        params_dict = params_config.ds_output_details_validity
+        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
 
 
     def datasource_details_invalid_data_id(self):
@@ -153,41 +104,29 @@ class DataSourceOutput(BasePage):
             无效的数据源—详情—输出,错误的data_id。
             Returns: get请求的结果
         """
-        dict_data =  {
-                "id" : 'xxxjejl1',
-                "case_id" : '442791611'
-                }
-        return self.get_http_response(data_source_details_url, dict_data, headers)
+        params_dict = params_config.ds_output_details_invalid_data_id
+        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
 
     def datasource_details_null_data_id(self):
         """
             无效的数据源—详情—输出,data_id为空。
             Returns: get请求的结果
         """
-        dict_data =  {
-                "id" :  '',
-                "case_id" : '442791611'
-                }
-        return self.get_http_response(data_source_details_url, dict_data, headers)
+        params_dict = params_config.ds_output_details_null_data_id
+        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
 
     def datasource_details_invalid_case_id(self):
         """
             无效的数据源—详情—输出,错误的case_id。
             Returns: get请求的结果
         """
-        dict_data =  {
-                "id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
-                "case_id" : 'j4irieoro'
-                }
-        return self.get_http_response(data_source_details_url, dict_data, headers)
+        params_dict = params_config.ds_output_details_invalid_case_id
+        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
 
     def datasource_details_null_case_id(self):
         """
             无效的数据源—详情—输出,case_id为空。
             Returns: get请求的结果
         """
-        dict_data =  {
-                "id" : '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
-                "case_id" : ''
-                }
-        return self.get_http_response(data_source_details_url, dict_data, headers)
+        params_dict = params_config.ds_output_details_null_case_id
+        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
