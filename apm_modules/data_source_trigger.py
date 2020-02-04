@@ -62,5 +62,5 @@ class DataSourceTrigger(OpenURL):
             url = skip_clean_url + '&ENV_ACTION_SKIP_CLEAN={}'
             return url
         else:
-            url = skip_clean_url + '&ENV_ACTION_SKIP_CLEAN=' + str(skip_clean_data)
+            url = skip_clean_url + '&ENV_ACTION_SKIP_CLEAN=' + str(data)
             return url
