@@ -109,7 +109,7 @@ class TestTemplateMgt():
         assert s_code == 200
 
     @pytest.mark.TemplateMgt
-    @allure.feature("模板详情—schema结构校验")
+    @allure.story("模板详情—schema结构校验")
     def test_templateMgt_details_schema(self):
         json_data = tm.templateMgt_details_validity().json()
         validate(json_data, schema=template_mgt_details_schema)

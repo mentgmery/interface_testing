@@ -16,7 +16,7 @@ from common.openbrowser import OpenURL
 cf = configHTTP.ConfigHttp()
 
 #dataSource_url = "xxxxx"
-dataSource_url = "/api/template"
+#dataSource_url = "/api/template"
 
 class DataSourceTrigger(OpenURL):
 

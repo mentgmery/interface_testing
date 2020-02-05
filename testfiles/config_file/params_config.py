@@ -31,6 +31,23 @@ tm_output_details_headers = None
 ds_ops_url = "/filemanagement"
 ds_ops_headers = None
 
+# 数据清洗-动作
+clean_ops_url = "/dataetl" #清洗
+skip_clean_ops_url = "/filemanagement"#跳过清洗
+clean_ops_headers = None
+skip_clean_ops_headers = None
+
+# 数据清洗-动作-参数
+clean_data = {
+    "case_id": "908651985",
+    "sDid": "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+}
+
+skip_clean_data = {
+    "case_id": "908651985",
+    "sDid": "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+}
+
 # 数据源-动作-新增数据参数
 ds_ops_add_data = {
     "case_id": "442791611"

@@ -10,42 +10,29 @@
 
 import json
 from common import configHTTP
+from common.base_page import BasePage
 from common.getData import GetData
 from common.openbrowser import OpenURL
+from testfiles.config_file import params_config
 
 cf = configHTTP.ConfigHttp()
 
-clean_url = "/dataetl"
 
-skip_clean_url = "/filemanagement"
-
-class DataCleaningOps(OpenURL):
+class DataCleaningOps(OpenURL,BasePage):
 
     def get_clean_url(self):
         """获取清洗url
         :return: 返回请求的url 示例：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx
         """
-        dict_data = {
-          "case_id": "908651985",
-          "sDid" : "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
-        }
-        cf.set_url(clean_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get().url
+        params_dict = params_config.clean_data
+        return self.get_http_response(params_config.clean_ops_url, params_dict, params_config.clean_ops_headers)
 
     def get_skip_clean_url(self):
         """获取清洗url
         :return: 返回请求的url 示例：http://192.168.1.244:8881/filemanagement?case_id=xxxx&sDid=xxxx
         """
-        dict_data = {
-          "case_id": "908651985",
-          "sDid" : "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
-        }
-        cf.set_url(skip_clean_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get().url
+        params_dict = params_config.skip_clean_data
+        return self.get_http_response(params_config.skip_clean_ops_url, params_dict, params_config.skip_clean_ops_headers)
 
     def data_cleaning_ops(self,url,requiredDom):
         """
