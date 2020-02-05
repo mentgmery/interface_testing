@@ -10,24 +10,22 @@
 import json,time
 from common import configHTTP
 from common.openbrowser import OpenURL
+from testfiles.config_file import params_config
+from common.base_page import BasePage
 
 cf = configHTTP.ConfigHttp()
 
-ops_url = "/filemanagement"
 
-class DataSourceOps(OpenURL):
+
+class DataSourceOps(OpenURL,BasePage):
 
     def get_datasource_add_data_url(self):
+
         """获取新增数据url
         :return: 返回请求的url 示例: http://192.168.1.244:8881/filemanagement?case_id=xxxx
         """
-        dict_data = {
-            "case_id" : "442791611"
-        }
-        cf.set_url(ops_url)
-        cf.set_params(dict_data)
-        cf.set_headers(None)
-        return cf.get().url
+        params_dict = params_config.ds_ops_add_data
+        return self.get_http_response(params_config.ds_ops_url, params_dict, params_config.ds_ops_headers)
 
     def datasource_add_data(self,url,requiredDom):
         """
