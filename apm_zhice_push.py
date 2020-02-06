@@ -40,7 +40,7 @@ def dd_push(url):
     钉钉推送
     '''
     con={"msgtype":"text",
-         "text":{"content":"APM接口自动化脚本执行完成。\n测试概述:\n运行总数:"+retries_run+"\n通过数量:"+status_passed+"\n失败数量:"+status_failed+"\n构建地址：\n"+job_url+"\n报告地址：\n"+report_url}
+         "text":{"content":"Dev分支的APM接口自动化脚本执行完成。\n测试概述:\n运行总数:"+retries_run+"\n通过数量:"+status_passed+"\n失败数量:"+status_failed+"\n构建地址：\n"+job_url+"\n报告地址：\n"+report_url}
          }
 
     requests.post(url,data=json.dumps(con),headers={'Content-Type':'application/json'})
