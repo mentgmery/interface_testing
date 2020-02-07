@@ -9,7 +9,26 @@
 '''
 
 import json
-from common.base_page import BasePage
+
+
+# local环境的api端口
+port = {'dc': '8018', 'ds': '8016', 'templt': '8017'}
+
+# 所有dev分支环境的api端口
+dev_port = {'dev_dc_port': '8018', 'dev_ds_port': '8016', 'dev_templt_port': '8017'}
+
+# 所有昊天环境的api端口
+haotian_port = 'xxx'
+
+# # 所有dev分支环境的api端口
+# dev_dc_port = '8018'
+# dev_ds_port = '8016'
+# dev_templt_port = '8017'
+
+# # 所有昊天环境的api端口
+# haotian_dc_port = 'xxx'
+# haotian_ds_port = 'yyy'
+# haotian_templt_port = 'zzz'
 
 
 # 所有api url
@@ -125,13 +144,13 @@ tm_output_details_null_caseid = {
 dc_output_list_schema_check_params = {
             "page_size": 100,
             "page": 1,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 dc_output_list_valid_caseid_params = {
             "page_size": 100,
             "page": 1,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 dc_output_list_invalid_caseid_params = {
@@ -153,7 +172,7 @@ dc_output_list_without_caseid_params = {
 dc_output_list_by_valid_page_num = {
             "page_size": 20,
             "page": 2,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 dc_output_list_by_invalid_page_num = {
             "page_size": 100,
@@ -163,13 +182,13 @@ dc_output_list_by_invalid_page_num = {
 
 dc_output_list_without_page_num = {
             "page_size": 100,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 dc_output_list_invalid_page_size = {
             "page_size": -1,
             "page": 0,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 dc_output_list_less_than_page_size = {
@@ -181,18 +200,18 @@ dc_output_list_less_than_page_size = {
 dc_output_list_more_than_page_size = {
             "page_size": 11,
             "page": 1,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 dc_output_list_none_page_size = {
             "page_size": None,
             "page": 0,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 dc_output_list_without_page_size = {
             "page": 0,
-            "case_id": 659939916
+            "case_id": 817845123
         }
 
 
