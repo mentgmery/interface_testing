@@ -12,9 +12,9 @@ import json
 from common.base_page import BasePage
 from testfiles.config_file import params_config
 
-data_source_url = "/api/data_source"
-data_source_details_url = "/lensData/lensData/getRawData"
-headers = None
+
+inf_type = 'dc'
+
 
 class DataSourceOutput(BasePage):
 
@@ -24,7 +24,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_validity_params
-        return self.get_http_response(params_config.ds_output_list_url, params_dict, params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_invalid_q_type(self):
         """
@@ -32,7 +33,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_invalid_params
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_null_q_type(self):
         """
@@ -40,7 +42,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_null_q_type
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_invalid_page_size(self):
         """
@@ -48,7 +51,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_invalid_page_size
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_null_page_size(self):
         """
@@ -56,7 +60,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_null_page_size
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_invalid_page(self):
         """
@@ -64,7 +69,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_invalid_page
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_null_page(self):
         """
@@ -72,7 +78,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_null_page
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_invalid_case_id(self):
         """
@@ -80,7 +87,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_invalid_case_id
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_list_null_case_id(self):
         """
@@ -88,7 +96,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_list_null_case_id
-        return self.get_http_response(params_config.ds_output_list_url, params_dict,params_config.ds_output_list_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_list_url, params_dict,
+                                      params_config.ds_output_list_headers)
 
     def datasource_details_validity(self):
         """
@@ -96,8 +105,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_details_validity
-        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
-
+        return self.get_http_response(inf_type, params_config.ds_output_details_url, params_dict,
+                                      params_config.ds_output_details_headers)
 
     def datasource_details_invalid_data_id(self):
         """
@@ -105,7 +114,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_details_invalid_data_id
-        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_details_url, params_dict,
+                                      params_config.ds_output_details_headers)
 
     def datasource_details_null_data_id(self):
         """
@@ -113,7 +123,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_details_null_data_id
-        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_details_url, params_dict,
+                                      params_config.ds_output_details_headers)
 
     def datasource_details_invalid_case_id(self):
         """
@@ -121,7 +132,8 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_details_invalid_case_id
-        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_details_url, params_dict,
+                                      params_config.ds_output_details_headers)
 
     def datasource_details_null_case_id(self):
         """
@@ -129,4 +141,5 @@ class DataSourceOutput(BasePage):
             Returns: get请求的结果
         """
         params_dict = params_config.ds_output_details_null_case_id
-        return self.get_http_response(params_config.ds_output_details_url, params_dict,params_config.ds_output_details_headers)
+        return self.get_http_response(inf_type, params_config.ds_output_details_url, params_dict,
+                                      params_config.ds_output_details_headers)
