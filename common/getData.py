@@ -15,18 +15,34 @@ import string
 import time
 import yaml
 import os
+from testfiles.config_file import params_config
+
 
 config = configparser.ConfigParser()
 proDir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+# 运行环境：0.dev分支 1.昊天  2.本地
+run_env = 2
+
 
 class GetData():
 
     # 获取请求url
-    def get_apm_url(self):
+    def get_apm_url(self, inf):
         configPath = proDir + '/testfiles/config_file/config.ini'
         path = os.path.abspath(configPath)
         config.read(path, encoding="utf-8")
-        url = config.get('testServer','apm_url')
+        inf_port = ''
+        url = ''
+        if run_env == 2:
+            url = config.get('testServer', 'apm_url')
+            inf_port = params_config.port[inf]
+        elif run_env == 0:
+            url = config.get('devServer', 'apm_url')
+            inf_port = params_config.dev_port[inf]
+        elif run_env == 1:
+            url = config.get('haotianServer', 'apm_url')
+            inf_port = params_config.haotian_port[inf]
+        url = url + ":" + inf_port
         return url
 
     # 获取请求token

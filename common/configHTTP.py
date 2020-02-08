@@ -16,15 +16,16 @@ req_session = requests.session()
 
 logger = Logger(logger="ConfigHttp").get_log()
 
+
 class ConfigHttp:
 
-    def set_url(self,url):
+    def set_url(self, url, inf_type):
         '''
         根据用户提供的项目名、端口号去判断项目的url拼接
         :param url:
         :return:
         '''
-        self.url = GetData().get_apm_url()+url
+        self.url = GetData().get_apm_url(inf_type) + url
 
     def set_headers(self, header=None):
         '''
