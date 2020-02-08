@@ -21,7 +21,7 @@ from testfiles.config_file import params_config
 config = configparser.ConfigParser()
 proDir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # 运行环境：0.dev分支 1.昊天  2.本地
-run_env = 2
+run_env = 1
 
 
 class GetData():
