@@ -21,7 +21,7 @@ from testfiles.config_file import params_config
 config = configparser.ConfigParser()
 proDir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # 运行环境：0.dev分支 1.昊天  2.本地
-run_env = 1
+run_env = 2
 
 
 class GetData():
@@ -36,10 +36,10 @@ class GetData():
         if run_env == 2:
             url = config.get('testServer', 'apm_url')
             inf_port = params_config.port[inf]
-        elif run_env == 1:
+        elif run_env == 0:
             url = config.get('devServer', 'apm_url')
             inf_port = params_config.dev_port[inf]
-        elif run_env == 0:
+        elif run_env == 1:
             url = config.get('haotianServer', 'apm_url')
             inf_port = params_config.haotian_port[inf]
         url = url + ":" + inf_port
