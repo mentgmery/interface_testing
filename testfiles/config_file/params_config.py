@@ -38,13 +38,13 @@ dc_output_case_id = 817845123
 
 # 数据清洗-动作-参数
 clean_data = {
-    "case_id": "908651985",
-    "sDid": "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+    "case_id": "817845123",
+    "sDid": "B9DA4E38-505E-4F4B-B81E-C8B6F541D18A"
 }
 
 skip_clean_data = {
-    "case_id": "908651985",
-    "sDid": "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+    "case_id": "817845123",
+    "sDid": "B9DA4E38-505E-4F4B-B81E-C8B6F541D18A"
 }
 
 # 数据源-动作-新增数据参数
