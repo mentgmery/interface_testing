@@ -21,27 +21,61 @@ from testfiles.config_file import params_config
 config = configparser.ConfigParser()
 proDir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # 运行环境：0.dev分支 1.昊天  2.本地
-run_env = 2
+run_env = 0
+data_cleaning_inf = 'dc'
+data_source_inf = 'ds'
+template_inf = 'templt'
+# local环境的api端口
+port = {'dc': '8018', 'ds': '8016', 'templt': '8017'}
+# 所有dev分支环境的api端口
+dev_port = {'dev_dc': '8018', 'dev_ds': '8016', 'dev_templt': '8017'}
+# 所有昊天环境的api端口
+haotian_port = {'haotian_dc': '8018', 'haotian_ds': '8016', 'haotian_templt': '8017'}
 
 
 class GetData():
 
+    # def get_port(self):
+    #     # 运行环境：0.dev分支 1.昊天  2.本地
+    #     data_cleaning_inf = 'dc'
+    #     data_source_inf = 'ds'
+    #     template_inf = 'templt'
+    #     port = {}
+    #     if run_env == 2:
+    #         port = {data_cleaning_inf: '8018', data_source_inf: '8016', template_inf: '8017'}
+    #     elif run_env == 0:
+    #         dev_data_cleaning_inf = 'dev_' + data_cleaning_inf
+    #         dev_data_source_inf = 'ds' + data_source_inf
+    #         dev_template_inf = 'templt' + template_inf
+    #         port = {dev_data_cleaning_inf: '8018', dev_data_source_inf: '8016', dev_template_inf: '8017'}
+    #     elif run_env == 1:
+    #         haotian_data_cleaning_inf = 'haotian_' + data_cleaning_inf
+    #         haotian_data_source_inf = 'ds' + data_source_inf
+    #         haotian_template_inf = 'templt' + template_inf
+    #         port = {haotian_data_cleaning_inf: '8018', haotian_data_source_inf: '8016', haotian_template_inf: '8017'}
+    #     return port
+
     # 获取请求url
-    def get_apm_url(self, inf):
+    def get_apm_url(self, inf_type):
         configPath = proDir + '/testfiles/config_file/config.ini'
         path = os.path.abspath(configPath)
         config.read(path, encoding="utf-8")
+        # 运行环境：0.dev分支 1.昊天  2.本地
         inf_port = ''
         url = ''
+        port = {}
         if run_env == 2:
             url = config.get('testServer', 'apm_url')
-            inf_port = params_config.port[inf]
+            inf = inf_type
+            inf_port = port[inf]
         elif run_env == 0:
             url = config.get('devServer', 'apm_url')
-            inf_port = params_config.dev_port[inf]
+            inf = 'dev_' + inf_type
+            inf_port = dev_port[inf]
         elif run_env == 1:
             url = config.get('haotianServer', 'apm_url')
-            inf_port = params_config.haotian_port[inf]
+            inf = 'haotian_' + inf_type
+            inf_port = haotian_port[inf]
         url = url + ":" + inf_port
         return url
 

@@ -7,19 +7,6 @@
 @Version:1.0
 @Desc   : 参数配置
 '''
-
-import json
-
-
-# local环境的api端口
-port = {'dc': '8018', 'ds': '8016', 'templt': '8017'}
-
-# 所有dev分支环境的api端口
-dev_port = {'dev_dc_port': '8018', 'dev_ds_port': '8016', 'dev_templt_port': '8017'}
-
-# 所有昊天环境的api端口
-haotian_port = {'haotian_dc_port': '8018', 'haotian_ds_port': '8016', 'haotian_templt_port': '8017'}
-
 # 所有api url
 dc_output_list_url = "/api/dataset"
 dc_output_details_url = "/lensData/lensData/getResultSet"
