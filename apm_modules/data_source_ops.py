@@ -14,7 +14,7 @@ from testfiles.config_file import params_config
 from common.base_page import BasePage
 
 cf = configHTTP.ConfigHttp()
-
+inf_type = 'ds'
 
 
 class DataSourceOps(OpenURL,BasePage):
@@ -25,9 +25,9 @@ class DataSourceOps(OpenURL,BasePage):
         :return: 返回请求的url 示例: http://192.168.1.244:8881/filemanagement?case_id=xxxx
         """
         params_dict = params_config.ds_ops_add_data
-        return self.get_http_response(params_config.ds_ops_url, params_dict, params_config.ds_ops_headers)
+        return self.get_http_response(inf_type, params_config.ds_ops_url, params_dict, params_config.ds_ops_headers)
 
-    def datasource_add_data(self,url,requiredDom):
+    def datasource_add_data(self,url, requiredDom):
         """
         数据源—动作，打开浏览器，访问url获取元素值
         :param url: 动作的url地址

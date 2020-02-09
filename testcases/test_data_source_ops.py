@@ -10,13 +10,14 @@
 import pytest, allure
 from apm_modules.data_source_ops import DataSourceOps
 
+
 @allure.feature("数据源—动作")
 @pytest.mark.usefixtures('driver_setup')
-class TestDataSource_OPS():
+class TestDataSourceOPS():
 
     @pytest.mark.DataSource
     @allure.story("数据源—动作—新增数据")
     def test_data_source_ops(self):
         ds=DataSourceOps(self.driver)
         url = ds.get_datasource_add_data_url() # 获取数据源url
-        assert ds.datasource_add_data(url,'__data_source_jumpetl') == True
+        assert ds.datasource_add_data(url, '__data_source_jumpetl') is True
