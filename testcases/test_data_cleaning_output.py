@@ -24,13 +24,13 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出-schema校验")
-    def test_data_cleaning_output_schema_check(self):
+    def test_data_cleaning_list_schema_check(self):
         json_data = dc.get_data_cleaning_list_jsonschema().json()
         validate(json_data, schema=data_cleaning_list_schema)
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—有效case_id参数")
-    def test_data_cleaning_valid_case_id(self):
+    def test_data_cleaning_output_valid_case_id(self):
         """
         验证数据源列表—有效case_id；
         校验状态码
@@ -41,7 +41,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无效case_id参数")
-    def test_data_cleaning_invalid_case_id(self):
+    def test_data_cleaning_output_invalid_case_id(self):
         """
         验证数据源列表—无效case_id；
         校验状态码
@@ -53,7 +53,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—case_id参数值为空")
-    def test_data_cleaning_no_value_case_id(self):
+    def test_data_cleaning_output_by_none_case_id(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -64,7 +64,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无case_id参数")
-    def test_data_cleaning_without_case_id(self):
+    def test_data_cleaning_output_without_case_id(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -75,7 +75,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—有效page参数")
-    def test_data_cleaning_with_valid_page_num(self):
+    def test_data_cleaning_output_with_valid_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -84,13 +84,15 @@ class TestDataCleaningOutput():
         data_value = json_data["data"]["data"]
         page_size = json_data["data"]["pageSize"]
         total_pages = json_data["data"]["totalPages"]
-        assert page_size == 20
-        assert total_pages == 1
+        data_count = json_data["data"]["count"]
+        assert page_size == 10
+        assert total_pages == 2
+        assert data_count == 13
         assert len(data_value)
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—实际size<page_size参数")
-    def test_data_cleaning_with_size_less_than_page_size(self):
+    def test_data_cleaning_list_with_size_more_than_page_size(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -102,29 +104,29 @@ class TestDataCleaningOutput():
         total_pages = json_data["data"]["totalPages"]
         assert page_size == 7
         assert total_pages == 2
-        assert count == 10
+        assert count == 13
         assert len(data_value) == 7
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—实际size>page_size参数")
-    def test_data_cleaning_details_with_size_less_than_page_size(self):
+    def test_data_cleaning_list_with_size_less_than_page_size(self):
         """
         验证数据源列表—空case_id；
         校验状态码
         """
-        json_data = dc.get_data_cleaning_list_size_more_than_page_size().json()
+        json_data = dc.get_data_cleaning_list_size_less_than_page_size().json()
         data_value = json_data["data"]["data"]
         count = json_data["data"]["count"]
         page_size = json_data["data"]["pageSize"]
         total_pages = json_data["data"]["totalPages"]
-        assert page_size == 11
+        assert page_size == 14
         assert total_pages == 1
-        assert count == 10
-        assert len(data_value) == 10
+        assert count == 13
+        assert len(data_value) == 13
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无效的page num")
-    def test_data_cleaning_details_with_invalid_page_num(self):
+    def test_data_cleaning_list_with_invalid_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -136,12 +138,12 @@ class TestDataCleaningOutput():
         total_pages = json_data["data"]["totalPages"]
         assert page_size == 100
         assert total_pages == 1
-        assert count == 10
-        assert len(data_value) == 10
+        assert count == 13
+        assert len(data_value) == 13
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—无page num")
-    def test_data_cleaning_details_without_page_num(self):
+    def test_data_cleaning_list_without_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
@@ -153,8 +155,8 @@ class TestDataCleaningOutput():
         total_pages = json_data["data"]["totalPages"]
         assert page_size == 100
         assert total_pages == 1
-        assert count == 10
-        assert len(data_value) == 10
+        assert count == 13
+        assert len(data_value) == 13
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出详情-schema校验")
