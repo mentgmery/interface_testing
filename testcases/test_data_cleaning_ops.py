@@ -11,6 +11,7 @@ import pytest
 import allure
 from apm_modules.data_cleaning_ops import DataCleaningOps
 
+
 @allure.feature("数据清洗动作")
 @pytest.mark.usefixtures('driver_setup')
 class TestDataCleaningOps():
@@ -23,7 +24,7 @@ class TestDataCleaningOps():
         """
         dc=DataCleaningOps(self.driver)
         url = dc.get_clean_url() # 获取清洗url
-        assert dc.data_cleaning_ops(url,'__data_source_etl') == True
+        assert dc.data_cleaning_ops(url, '__data_source_etl') is True
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗—动作—跳过清洗")
@@ -33,4 +34,4 @@ class TestDataCleaningOps():
         """
         dc=DataCleaningOps(self.driver)
         url = dc.get_skip_clean_url() # 获取跳过清洗url
-        assert dc.data_cleaning_ops(url,'__data_source_jumpetl') == True
+        assert dc.data_cleaning_ops(url, '__data_source_jumpetl') is True
