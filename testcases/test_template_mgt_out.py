@@ -41,7 +41,6 @@ class TestTemplateMgt():
         assert s_code == 200
         assert pagesize == 100
 
-
     @pytest.mark.TemplateMgt
     @allure.story("模板列表—无效的caseid")
     def test_templateMgt_list_invalid_caseid(self):

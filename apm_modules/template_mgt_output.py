@@ -15,6 +15,10 @@ from testfiles.config_file import params_config
 from common.base_page import BasePage
 cf = configHTTP.ConfigHttp()
 
+
+inf_type = 'templt'
+
+
 class TemplateMgtOutput(BasePage):
 
     def templateMgt_list_validity(self):
@@ -23,7 +27,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_validity
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
     def templateMgt_list_invalid_caseid(self):
         """
@@ -31,7 +35,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_invalid_caseid
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
     def templateMgt_list_null_caseid(self):
         """
@@ -39,7 +43,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_null_caseid
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
     def templateMgt_list_invalid_page(self):
         """
@@ -47,7 +51,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_invalid_page
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
 
     def templateMgt_list_null_page(self):
@@ -56,7 +60,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_null_page
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
     def templateMgt_list_invalid_pagesize(self):
         """
@@ -64,7 +68,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_invalid_pagesize
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
     def templateMgt_list_null_pagesize(self):
         """
@@ -72,7 +76,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_list_null_pagesize
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_list_headers)
 
     def templateMgt_details_validity(self):
         """
@@ -80,7 +84,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_details_validity
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_invalid_temid(self):
         """
@@ -88,7 +92,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_details_invalid_temid
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_null_temid(self):
         """
@@ -96,7 +100,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_details_null_temid
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_invalid_caseid(self):
         """
@@ -104,7 +108,7 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_details_invalid_caseid
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_null_caseid(self):
         """
@@ -112,4 +116,4 @@ class TemplateMgtOutput(BasePage):
         Returns: get请求的结果
         """
         params_dict = params_config.tm_output_details_null_caseid
-        return self.get_http_response(params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
