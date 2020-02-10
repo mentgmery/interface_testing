@@ -15,28 +15,28 @@ from apm_modules.data_source_trigger import DataSourceTrigger
 
 
 clean_data={
-        "clean": {
             "name": "清洗",
             "alias": "clean",
             "type": "page",
             "paramsdata": {
-                "case_id" : "908651985",
-                "sDid" : "B338F6FE-8F93-4037-A99A-D36EE67CA1E6"
+                "case_id" : "817845123",
+                "sDid" : "7E06FACE-0921-472F-BF52-C070750544D4"
         },
-        "url": "http://admin.gongan.corp.elensdata.com/dataetl",
+        "url": "http://192.168.1.78:8018/dataetl",
         "desc": '跳转到数据清洗页面，弹出表头选定的弹窗'
       }
-    }
+
 
 skip_clean_data = {
         "name": "跳过清洗",
         "alias": "skip-clean",
         "type": "page",
         "paramsdata": {
-          "case_id": '908651985',
-          "sDid": 'B338F6FE-8F93-4037-A99A-D36EE67CA1E6'
+          "case_id": '817845123',
+          "sDid": '7E06FACE-0921-472F-BF52-C070750544D4',
+          "is_jump": 'true'
         },
-        "url": "http://admin.gongan.corp.elensdata.com/filemanagement",
+        "url": "http://192.168.1.78:8018/dataetl",
         "desc": "跳转到数据清洗页面，弹出跳过清洗的弹窗"
       }
 
@@ -52,6 +52,7 @@ class TestDataSourceTrigger():
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_clean_url(clean_data) # 获取数据源触发器—清洗—url
+        print(url)
         boolean_value=dst.datasource_trigger_url(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
         assert boolean_value == True
 
@@ -63,6 +64,7 @@ class TestDataSourceTrigger():
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_clean_url(None) # 获取数据源触发器—清洗—url
+        print(url)
         boolean_value=dst.datasource_trigger_url(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
         assert boolean_value == False
 
@@ -74,7 +76,8 @@ class TestDataSourceTrigger():
         验证数据源跳过清洗触发器，ENV_ACTION_SKIP_CLEAN非空，页面id为__data_source_jumpetl元素是否存在
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
-        url=dst.get_datasource_trigger_skip_clean_url(skip_clean_data) # 获取数据源触发器—跳过清洗—url
+        url=dst.get_datasource_trigger_skip_clean_url(skip_clean_data) # 获取数据源触发器—跳过清洗—urlk
+        print(url)
         boolean_value=dst.datasource_trigger_url(url,'__data_source_jumpetl') #打开url地址，获取id为__data_source_jumpetl的元素是否存在，返回布尔值
         assert boolean_value == True
 

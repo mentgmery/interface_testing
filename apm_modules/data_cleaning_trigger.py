@@ -7,6 +7,9 @@
 @Version:1.0
 @Desc   : 数据清洗—新增数据—触发器
 '''
+import json
+
+from apm_modules.data_cleaning_ops import DataCleaningOps
 from apm_modules.data_source_ops import DataSourceOps
 from common.openbrowser import OpenURL
 
@@ -23,7 +26,7 @@ class DataCleaningTrigger(OpenURL):
         """
         self.driver.get(url)
         # self.driver.page_source
-        value = self.driver.find_element_by_id(requiredDom).is_displayed()  # 取什么值自己定位元素
+        value = self.driver.find_element_by_id(requiredDom).is_enabled()  # 取什么值自己定位元素
         # visible = self.driver.find_element_by_id('su').is_displayed() # 取什么值自己定位元素
         return value
 
@@ -33,10 +36,10 @@ class DataCleaningTrigger(OpenURL):
         获取数据清洗触发器—url
         Returns: 返回get的url 示例：http://192.168.1.244:8881/dataetl?case_id=xxxx&sDid=xxxx&ENV_ACTION_ADD=xxxx
         """
-        add_data_url=DataSourceOps(self.driver).get_datasource_add_data_url() # 获取数据源动作—新增数据url
+        clean_url = DataCleaningOps(self.driver).get_clean_url()  # 获取数据清洗动作—清洗url
         if data is None:
-            url = add_data_url + '&ENV_ACTION_ADD={}'
+            url = clean_url + '&ENV_ACTION_ADD={}'
             return url
         else:
-            url = add_data_url + '&ENV_ACTION_ADD=' + str(data)
+            url = clean_url + '&ENV_ACTION_ADD=' + json.dumps(data)
             return url
