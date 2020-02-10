@@ -8,6 +8,7 @@
 @Desc   : 数据源—清洗/跳过清洗—触发器
 '''
 import json
+import time
 
 from apm_modules.data_cleaning_ops import DataCleaningOps
 from apm_modules.data_source_ops import DataSourceOps
@@ -16,12 +17,14 @@ from common.openbrowser import OpenURL
 
 cf = configHTTP.ConfigHttp()
 
+clean = "//*[@class='el-table__fixed-right']/div[2]/table/tbody/tr[1]/td[5]/div/button[2]/span"
+skip_clean = "//*[@class='el-table__fixed-right']/div[2]/table/tbody/tr[1]/td[5]/div/button[3]/span"
 
 class DataSourceTrigger(OpenURL):
 
-    def datasource_trigger_url(self,url,requiredDom):
+    def get_datasource_trigger_etl_id(self,url,requiredDom):
         """
-        数据源—触发器，打开浏览器，访问url获取元素值
+        数据源—触发器-清洗，打开浏览器，访问url—dom树种是否包含__data_source_etl
         :param url: 触发器请求接口后，访问url地址
         :param requiredDom: Dom树中id值
                 清洗：'__data_source_etl'，
@@ -29,10 +32,45 @@ class DataSourceTrigger(OpenURL):
         :return: 布尔，True/False;存在/不存在
         """
         self.driver.get(url)
-        #self.driver.page_source
+        self.driver.find_element_by_xpath(clean).click()
+        windows = self.driver.window_handles
+        self.driver.switch_to_window(windows[-1])
+        time.sleep(1)
         value = self.driver.find_element_by_id(requiredDom).is_enabled() # 取什么值自己定位元素
-        #visible = self.driver.find_element_by_id('su').is_displayed() # 取什么值自己定位元素
         return value
+
+
+
+    def get_datasource_trigger_jumpetl_id(self,url,requiredDom):
+        """
+        数据源—触发器—跳过清洗，打开浏览器，访问url—dom树种是否包含__data_source_jumpetl
+        :param url: 触发器请求接口后，访问url地址
+        :param requiredDom: Dom树中id值
+                清洗：'__data_source_etl'，
+                跳过清洗：'__data_source_jumpetl'
+        :return: 布尔，True/False;存在/不存在
+        """
+        self.driver.get(url)
+        self.driver.find_element_by_xpath(skip_clean).click()
+        windows = self.driver.window_handles
+        self.driver.switch_to_window(windows[-1])
+        time.sleep(1)
+        value = self.driver.find_element_by_id(requiredDom).is_enabled() # 取什么值自己定位元素
+        return value
+
+    def get_datasource_trigger_list_value(self,url):
+        """
+        数据源—列表中—右侧操作列—value值
+        :param url: 触发器请求接口后，访问url地址
+        :param requiredDom: Dom树中id值
+                清洗：'__data_source_etl'，
+                跳过清洗：'__data_source_jumpetl'
+        :return: 布尔，True/False;存在/不存在
+        """
+        self.driver.get(url)
+        text=self.driver.find_element_by_xpath(clean).text
+        return text
+
 
     def get_datasource_trigger_clean_url(self,data):
         """

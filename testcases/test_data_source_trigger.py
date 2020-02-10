@@ -53,20 +53,20 @@ class TestDataSourceTrigger():
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_clean_url(clean_data) # 获取数据源触发器—清洗—url
         print(url)
-        boolean_value=dst.datasource_trigger_url(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
+        boolean_value=dst.get_datasource_trigger_etl_id(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataSource
     @allure.story("数据源—清洗—触发器-空")
-    def test_datasource_null_clean_trigger(self):
+    def test_datasource_null_clean_trigger(self): #//*[@class='el-table__body']/tbody/tr[1]/td[5]/div/button[2]
         """
         验证数据源清洗触发器，ENV_ACTION_CLEAN为空，页面id为__data_source_etl元素是否存在
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_clean_url(None) # 获取数据源触发器—清洗—url
         print(url)
-        boolean_value=dst.datasource_trigger_url(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
-        assert boolean_value == False
+        value=dst.get_datasource_trigger_list_value(url) #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
+        assert value == '跳过清洗'
 
 
     @pytest.mark.DataSource
@@ -78,7 +78,7 @@ class TestDataSourceTrigger():
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_skip_clean_url(skip_clean_data) # 获取数据源触发器—跳过清洗—urlk
         print(url)
-        boolean_value=dst.datasource_trigger_url(url,'__data_source_jumpetl') #打开url地址，获取id为__data_source_jumpetl的元素是否存在，返回布尔值
+        boolean_value=dst.get_datasource_trigger_jumpetl_id(url,'__data_source_jumpetl') #打开url地址，获取id为__data_source_jumpetl的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataSource
@@ -89,5 +89,5 @@ class TestDataSourceTrigger():
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_skip_clean_url(None) # 获取数据源触发器—跳过清洗—url
-        boolean_value=dst.datasource_trigger_url(url,'__data_source_jumpetl') #打开url地址，获取id为__data_source_jumpetl的元素是否存在，返回布尔值
-        assert boolean_value == False
+        value=dst.get_datasource_trigger_list_value(url) #打开url地址，获取id为__data_source_jumpetl的元素是否存在，返回布尔值
+        assert value == '清洗'
