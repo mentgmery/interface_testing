@@ -151,14 +151,14 @@ dc_output_list_without_caseid_params = {
         }
 
 dc_output_list_by_valid_page_num = {
-            "page_size": 20,
-            "page": 2,
+            "page_size": 10,
+            "page": 1,
             "case_id": dc_output_case_id
         }
 dc_output_list_by_invalid_page_num = {
             "page_size": 100,
             "page": -1,
-            "case_id": 659
+            "case_id": dc_output_case_id
         }
 
 dc_output_list_without_page_num = {
@@ -173,13 +173,13 @@ dc_output_list_invalid_page_size = {
         }
 
 dc_output_list_less_than_page_size = {
-            "page_size": 7,
+            "page_size": 11,
             "page": 1,
-            "case_id": 659939
+            "case_id": dc_output_case_id
         }
 
 dc_output_list_more_than_page_size = {
-            "page_size": 11,
+            "page_size": 7,
             "page": 1,
             "case_id": dc_output_case_id
         }
