@@ -28,13 +28,14 @@ ds_ops_headers = None
 
 # 数据清洗-动作
 clean_ops_url = "/dataetl" #清洗
-skip_clean_ops_url = "/filemanagement"#跳过清洗
+skip_clean_ops_url = "/dataetl"#跳过清洗
 clean_ops_headers = None
 skip_clean_ops_headers = None
 
 # 数据输出列表测试数据case_id
 dc_output_case_id = 817845123
 dc_output_id = '02E58ABA-91EA-4A35-9467-38230B772E96-preshow'
+data_sid = "7E06FACE-0921-472F-BF52-C070750544D4"
 
 # 数据源测试数据case_id
 ds_output_case_id = 817845123
@@ -43,17 +44,19 @@ ds_output_case_id = 817845123
 # 数据清洗-动作-参数
 clean_data = {
     "case_id": "817845123",
-    "sDid": "B9DA4E38-505E-4F4B-B81E-C8B6F541D18A"
+    "sDid": data_sid
 }
 
 skip_clean_data = {
     "case_id": "817845123",
-    "sDid": "B9DA4E38-505E-4F4B-B81E-C8B6F541D18A"
+    "sDid": data_sid,
+    "is_jump": 'true'
 }
 
-# 数据源-动作-新增数据参数
+# 数据源-动作-新增数据参数(这里参数有问题，问开发)
 ds_ops_add_data = {
-    "case_id": "817845123"
+    "openfile":"true",
+    "orign_url":"http://192.168.1.78:8018"
 }
 
 # 模板管理-列表参数
@@ -78,40 +81,40 @@ tm_output_list_null_caseid = {
 tm_output_list_invalid_page = {
     "page_size": 100,
     "page": 0,
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 
 tm_output_list_null_page = {
     "page_size": 100,
     "page": None,
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 
 tm_output_list_invalid_pagesize = {
     "page_size": -1,
     "page": 1,
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 
 tm_output_list_null_pagesize = {
     "page_size": None,
     "page": 1,
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 # 模板管理—详情参数
 tm_output_details_validity = {
     "tem_id": '777777',
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 
 tm_output_details_invalid_temid = {
     "tem_id": '我是错误的',
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 
 tm_output_details_null_temid = {
     "tem_id": "",
-    "case_id": '442791611'
+    "case_id": dc_output_case_id
 }
 
 tm_output_details_invalid_caseid = {
@@ -305,8 +308,8 @@ ds_output_list_null_case_id={
 
 # 数据源详情参数
 ds_output_details_validity = {
-    "id": '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
-    "case_id": ds_output_case_id
+    "case_id": ds_output_case_id，
+    "id": data_sid
 }
 
 ds_output_details_invalid_data_id = {
@@ -320,11 +323,11 @@ ds_output_details_null_data_id = {
 }
 
 ds_output_details_invalid_case_id = {
-    "id": '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
+    "id": data_sid,
     "case_id": 'j4irieoro'
 }
 
 ds_output_details_null_case_id = {
-    "id": '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
+    "id": data_sid,
     "case_id": ''
 }
