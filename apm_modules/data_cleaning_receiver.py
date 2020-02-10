@@ -18,7 +18,7 @@ dc_url = 'http://192.168.1.78:8018/dataetl'#数据清洗—列表URL
 
 class DataCleaningReceiver(OpenURL):
 
-    def datacleaning_receiver_url(self,url,requiredDom):
+    def get_datacleaning_receiver_id(self,url,requiredDom):
         """
         数据清洗—接收器，访问url获取元素值
         :param url: 接收器请求接口后，访问url地址
@@ -32,6 +32,15 @@ class DataCleaningReceiver(OpenURL):
         self.driver.get(url)
         value = self.driver.find_element_by_id(requiredDom).is_enabled() # 取什么值自己定位元素
         return value
+
+    def get_datacleaning_receiver_page_value(self,url):
+        """
+        :param url:接收器请求接口后，访问url地址
+        :return: 返回url的page_source
+        """
+        self.driver.get(url)
+        ps=self.driver.page_source
+        return ps
 
 
     def get_dataclean_receiver_datalist_url(self,data):

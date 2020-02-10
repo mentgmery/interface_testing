@@ -10,17 +10,20 @@
 import json
 import time
 
-from apm_modules.data_cleaning_ops import DataCleaningOps
-from apm_modules.data_source_ops import DataSourceOps
-from common import configHTTP
-from common.openbrowser import OpenURL
 
+from common import configHTTP
+from common.base_page import BasePage
+from common.openbrowser import OpenURL
+from apm_modules.data_source_output import DataSourceOutput as dso
 cf = configHTTP.ConfigHttp()
 
 clean = "//*[@class='el-table__fixed-right']/div[2]/table/tbody/tr[1]/td[5]/div/button[2]/span"
 skip_clean = "//*[@class='el-table__fixed-right']/div[2]/table/tbody/tr[1]/td[5]/div/button[3]/span"
+inf_type = 'ds'
+dst_data_url = dso().get_datasource_trigger_url()
 
-class DataSourceTrigger(OpenURL):
+
+class DataSourceTrigger(OpenURL,BasePage):
 
     def get_datasource_trigger_etl_id(self,url,requiredDom):
         """
@@ -32,6 +35,7 @@ class DataSourceTrigger(OpenURL):
         :return: 布尔，True/False;存在/不存在
         """
         self.driver.get(url)
+        time.sleep(1)
         self.driver.find_element_by_xpath(clean).click()
         windows = self.driver.window_handles
         self.driver.switch_to_window(windows[-1])
@@ -51,6 +55,7 @@ class DataSourceTrigger(OpenURL):
         :return: 布尔，True/False;存在/不存在
         """
         self.driver.get(url)
+        time.sleep(1)
         self.driver.find_element_by_xpath(skip_clean).click()
         windows = self.driver.window_handles
         self.driver.switch_to_window(windows[-1])
@@ -65,7 +70,7 @@ class DataSourceTrigger(OpenURL):
         :param requiredDom: Dom树中id值
                 清洗：'__data_source_etl'，
                 跳过清洗：'__data_source_jumpetl'
-        :return: 布尔，True/False;存在/不存在
+        :return: 元素的值
         """
         self.driver.get(url)
         text=self.driver.find_element_by_xpath(clean).text
@@ -80,12 +85,11 @@ class DataSourceTrigger(OpenURL):
                 空：http://192.168.1.78:8016/filemanagement?case_id=xxxx&sDid=xxxx&ENV_ACTION_CLEAN={}
         """
         #clean_url=DataCleaningOps(self.driver).get_clean_url() # 获取数据清洗动作—清洗url
-        data_url=DataSourceOps(self.driver).get_datasource_add_data_url() # 获取数据清洗动作—清洗url
         if data is None:
-            url = data_url + '&ENV_ACTION_CLEAN={}'
+            url = dst_data_url + '&ENV_ACTION_CLEAN={}'
             return url
         else:
-            url = data_url + '&ENV_ACTION_CLEAN=' + json.dumps(data)
+            url = dst_data_url + '&ENV_ACTION_CLEAN=' + json.dumps(data)
             return url
 
     def get_datasource_trigger_skip_clean_url(self,data):
@@ -95,11 +99,9 @@ class DataSourceTrigger(OpenURL):
                 非空：http://192.168.1.78:8016/filemanagement?case_id=xxxx&sDid=xxxx&ENV_ACTION_SKIP_CLEAN=xxxx
                 空：http://192.168.1.78:8016/filemanagement?case_id=xxxx&sDid=xxxx&ENV_ACTION_SKIP_CLEAN={}
         """
-        #skip_clean_url=DataCleaningOps(self.driver).get_skip_clean_url() # 获取数据清洗动作—跳过清洗url
-        data_url = DataSourceOps(self.driver).get_datasource_add_data_url()
         if data is None:
-            url = data_url + '&ENV_ACTION_SKIP_CLEAN={}'
+            url = dst_data_url + '&ENV_ACTION_SKIP_CLEAN={}'
             return url
         else:
-            url = data_url + '&ENV_ACTION_SKIP_CLEAN=' + json.dumps(data)
+            url = dst_data_url + '&ENV_ACTION_SKIP_CLEAN=' + json.dumps(data)
             return url

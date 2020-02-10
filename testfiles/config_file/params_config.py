@@ -8,6 +8,7 @@
 @Desc   : 参数配置
 '''
 # 所有api url
+
 dc_output_list_url = "/api/dataset"
 dc_output_details_url = "/api/lensData/lensData/getResultSet"
 dc_output_list_headers = None
@@ -53,17 +54,31 @@ skip_clean_data = {
     "is_jump": 'true'
 }
 
-# 数据源-动作-新增数据参数(这里参数有问题，问开发)
+# 数据清洗-触发器-新增数据参数
+dc_tr_add_dta ={
+    "case_id": dc_output_case_id
+}
+
+
+# 数据源-动作-新增数据参数
 ds_ops_add_data = {
     "openfile":"true",
     "orign_url":"http://192.168.1.78:8018"
 }
 
+# 数据源-触发器-新增数据参数
+ds_tr_add_data ={
+    "case_id": dc_output_case_id,
+    "sDid": data_sid
+}
+
+
+
 # 模板管理-列表参数
 tm_output_list_validity={
                     "page_size" : 100,
                     "page" : 1,
-                    "case_id" : '442791611'
+                    "case_id" : dc_output_case_id
                     }
 
 tm_output_list_invalid_caseid = {
@@ -331,3 +346,5 @@ ds_output_details_null_case_id = {
     "id": data_sid,
     "case_id": ''
 }
+
+

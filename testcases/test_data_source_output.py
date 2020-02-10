@@ -49,9 +49,9 @@ class TestDataSourceOutput():
         """
         r_data=ds.datasource_list_invalid_case_id()
         s_code = r_data.status_code
-        code = r_data.json()['code']
+        count = r_data.json()['data']['count']
         assert s_code == 200
-        assert code != 0
+        assert count == 0
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—无效的page")

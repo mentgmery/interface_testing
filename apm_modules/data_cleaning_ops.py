@@ -11,7 +11,7 @@
 import json
 from common import configHTTP
 from common.base_page import BasePage
-from common.getData import GetData
+
 from common.openbrowser import OpenURL
 from testfiles.config_file import params_config
 

@@ -38,3 +38,4 @@ class DataSourceOps(OpenURL,BasePage):
         self.driver.get(url)
         visible = self.driver.find_element_by_id(requiredDom).is_enabled()# 判断元素是否存在
         return visible
+

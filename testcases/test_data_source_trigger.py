@@ -11,8 +11,7 @@
 
 import allure,pytest
 from apm_modules.data_source_trigger import DataSourceTrigger
-
-
+from common.getData import GetData
 
 clean_data={
             "name": "清洗",
@@ -22,7 +21,7 @@ clean_data={
                 "case_id" : "817845123",
                 "sDid" : "7E06FACE-0921-472F-BF52-C070750544D4"
         },
-        "url": "http://192.168.1.78:8018/dataetl",
+        "url": GetData().get_apm_url('dc')+'/dataetl?',
         "desc": '跳转到数据清洗页面，弹出表头选定的弹窗'
       }
 
@@ -36,7 +35,7 @@ skip_clean_data = {
           "sDid": '7E06FACE-0921-472F-BF52-C070750544D4',
           "is_jump": 'true'
         },
-        "url": "http://192.168.1.78:8018/dataetl",
+        "url": GetData().get_apm_url('dc')+'/dataetl?',
         "desc": "跳转到数据清洗页面，弹出跳过清洗的弹窗"
       }
 
@@ -52,8 +51,7 @@ class TestDataSourceTrigger():
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_clean_url(clean_data) # 获取数据源触发器—清洗—url
-        print(url)
-        boolean_value=dst.get_datasource_trigger_etl_id(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
+        boolean_value = dst.get_datasource_trigger_etl_id(url,'__data_source_etl') #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataSource
@@ -64,7 +62,6 @@ class TestDataSourceTrigger():
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_clean_url(None) # 获取数据源触发器—清洗—url
-        print(url)
         value=dst.get_datasource_trigger_list_value(url) #打开url地址，获取id为__data_source_etl的元素是否存在，返回布尔值
         assert value == '跳过清洗'
 
@@ -77,7 +74,6 @@ class TestDataSourceTrigger():
         """
         dst = DataSourceTrigger(self.driver) # 打开浏览器
         url=dst.get_datasource_trigger_skip_clean_url(skip_clean_data) # 获取数据源触发器—跳过清洗—urlk
-        print(url)
         boolean_value=dst.get_datasource_trigger_jumpetl_id(url,'__data_source_jumpetl') #打开url地址，获取id为__data_source_jumpetl的元素是否存在，返回布尔值
         assert boolean_value == True
 

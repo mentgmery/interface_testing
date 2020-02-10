@@ -16,7 +16,7 @@ data_source_list ={
         "alias" : "data-list",
         "getMethods" : {
           "type" : "API",
-          "url" : "http://192.168.1.78:8016/api/data_source",
+          "url" : "/data_source",
           "parameter" : {
             "q_type": {
               "type": "Number",
@@ -35,12 +35,11 @@ data_source_list ={
       }
 
 data_source_details = {
-        "data-detail": {
         "name": "数据文件详情",
         "alias": "data-detail",
         "getMethods": {
           "type": "API",
-          "url": "http://192.168.1.78:8016/lensData/lensData/getRawData",
+          "url": "/lensData/lensData/getRawData",
           "parameter": {
             "id" : "7E06FACE-0921-472F-BF52-C070750544D4",
             "case_id" : "817845123"
@@ -53,15 +52,14 @@ data_source_details = {
           }
         }
       }
-    }
+
 
 template_list = {
-      "data-list": {
         "name" : "模板文件列表",
         "alias" : "data-list",
         "getMethods": {
           "type" : 'API',
-          "url" : 'http://192.168.1.78:8017/api/template',
+          "url" : '/template',
           "parameter" : {
             "page_size" : {
               "type" : "Number",
@@ -75,14 +73,13 @@ template_list = {
           }
         }
       }
-    }
 
-template_details =  {"data-detail": {
+template_details =   {
         "name": "模板文件详情",
         "alias": "data-detail",
         "getMethods": {
           "type": "API",
-          "url": "http://192.168.1.78:8017/template",
+          "url": "/template",
           "parameter": {
             "temp_id": {
               "type": "String",
@@ -96,7 +93,6 @@ template_details =  {"data-detail": {
           }
         }
       }
-    }
 
 
 @allure.feature("数据清洗—接收器")
@@ -112,7 +108,7 @@ class TestDataCleaningReceiver():
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_dataclean_receiver_datalist_url(data_source_list)  # 获取数据源触发器—新增数据url
         print(url)
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_source_list') # 打开url地址，获取id为__data_source_list的元素是否存在，返回布尔值
+        boolean_value = dcr.get_datacleaning_receiver_id(url,'__data_source_list') # 打开url地址，获取id为__data_source_list的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataCleaning
@@ -123,9 +119,8 @@ class TestDataCleaningReceiver():
         """
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_dataclean_receiver_datalist_url(None)  # 获取数据源触发器—新增数据url
-        print(url)
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_source_list') # 打开url地址，获取id为__data_source_list的元素是否存在，返回布尔值
-        assert boolean_value == False
+        ps_value = dcr.get_datacleaning_receiver_page_value(url,) # 打开url地址，获取id为__data_source_list的元素是否存在，返回布尔值
+        assert '__data_source_list' not in ps_value
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗—数据详情—接收器—非空")
@@ -136,7 +131,7 @@ class TestDataCleaningReceiver():
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_dataclean_receiver_datadetails_url(data_source_details)  # 获取数据源触发器—新增数据url
         print(url)
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_source_detail') # 打开url地址，获取id为__data_source_detail的元素是否存在，返回布尔值
+        boolean_value = dcr.get_datacleaning_receiver_id(url,'__data_source_detail') # 打开url地址，获取id为__data_source_detail的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataCleaning
@@ -147,9 +142,8 @@ class TestDataCleaningReceiver():
         """
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_dataclean_receiver_datadetails_url(None)  # 获取数据源触发器—新增数据url
-        print(url)
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_source_detail') # 打开url地址，获取id为__data_source_detail的元素是否存在，返回布尔值
-        assert boolean_value == False
+        ps_value = dcr.get_datacleaning_receiver_page_value(url) # 打开url地址，获取id为__data_source_detail的元素是否存在，返回布尔值
+        assert '__data_source_detail' not in ps_value
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗—模板列表—接收器—非空")
@@ -159,8 +153,7 @@ class TestDataCleaningReceiver():
         """
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_template_list_url(template_list)  # 获取数据源触发器—新增数据url
-        print(url)
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_template_list') # 打开url地址，获取id为__data_template-list的元素是否存在，返回布尔值
+        boolean_value = dcr.get_datacleaning_receiver_id(url,'__data_template_list') # 打开url地址，获取id为__data_template-list的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataCleaning
@@ -171,8 +164,8 @@ class TestDataCleaningReceiver():
         """
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_template_list_url(None)  # 获取数据源触发器—新增数据url
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_template_list') # 打开url地址，获取id为__data_template-list的元素是否存在，返回布尔值
-        assert boolean_value == False
+        ps_value = dcr.get_datacleaning_receiver_page_value(url) # 打开url地址，获取id为__data_template-list的元素是否存在，返回布尔值
+        assert '__data_template_list' not in ps_value
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗—模板详情—接收器-非空")
@@ -182,7 +175,7 @@ class TestDataCleaningReceiver():
         """
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_template_details_url(template_details)  # 获取数据源触发器—新增数据url
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_template-detail') # 打开url地址，获取id为__data_template-detail的元素是否存在，返回布尔值
+        boolean_value = dcr.get_datacleaning_receiver_id(url,'__data_template-detail') # 打开url地址，获取id为__data_template-detail的元素是否存在，返回布尔值
         assert boolean_value == True
 
     @pytest.mark.DataCleaning
@@ -193,5 +186,5 @@ class TestDataCleaningReceiver():
         """
         dcr = DataCleaningReceiver(self.driver)  # 打开浏览器
         url = dcr.get_template_details_url(None)  # 获取数据源触发器—新增数据url
-        boolean_value = dcr.datacleaning_receiver_url(url,'__data_template-detail') # 打开url地址，获取id为__data_template-detail的元素是否存在，返回布尔值
-        assert boolean_value == False
+        ps_value = dcr.get_datacleaning_receiver_page_value(url)#data_template-detail的元素是否存在，返回布尔值
+        assert '__data_template-detail' not in ps_value
