@@ -14,7 +14,7 @@ dc_output_list_headers = None
 dc_output_details_headers = None
 # 数据源
 ds_output_list_url = "/api/data_source"
-ds_output_details_url = "/api/lensData/lensData/getRawData"
+ds_output_details_url = "/lensData/lensData/getRawData"
 ds_output_list_headers = None
 ds_output_details_headers = None
 # 模板管理
@@ -34,7 +34,7 @@ skip_clean_ops_headers = None
 
 # 数据输出列表测试数据case_id
 dc_output_case_id = 817845123
-dc_output_id = '7E06FACE-0921-472F-BF52-C070750544D4'
+dc_output_id = '02E58ABA-91EA-4A35-9467-38230B772E96-preshow'
 
 
 # 数据清洗-动作-参数
@@ -142,7 +142,8 @@ dc_output_list_invalid_caseid_params = {
 
 dc_output_list_none_caseid_params = {
             "page_size": 100,
-            "page": 1
+            "page": 1,
+            "case_id": None
         }
 
 dc_output_list_without_caseid_params = {
@@ -173,7 +174,7 @@ dc_output_list_invalid_page_size = {
         }
 
 dc_output_list_less_than_page_size = {
-            "page_size": 11,
+            "page_size": 14,
             "page": 1,
             "case_id": dc_output_case_id
         }
