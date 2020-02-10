@@ -13,7 +13,7 @@ from common.base_page import BasePage
 from testfiles.config_file import params_config
 
 
-inf_type = 'dc'
+inf_type = 'ds'
 
 
 class DataSourceOutput(BasePage):
