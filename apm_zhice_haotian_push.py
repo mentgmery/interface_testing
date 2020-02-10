@@ -11,15 +11,30 @@ server = jenkins.Jenkins(jenkins_url, username='lianfeng', password='elensdata')
 job_name="job/jTest-testing-automation-apm_test_driven/" # job名称
 job_url=jenkins_url+job_name # job的url地址
 job_last_number=server.get_info(job_name)['lastBuild']['number'] # 获取最后一次构建
-# print(job_last_number)
-# print(job_url)
 report_url=job_url+str(job_last_number)+'/allure' # 报告地址
-# print(report_url)
+build_url = 'http://192.168.1.176:8090/job/jTest-testing-automation-apm_test_driven/' + str(job_last_number) \
+            + '/api/json?token=12345678'
 '''
 钉钉推送方法：
 读取report文件中"prometheusData.txt"，循环遍历存储为字典，从字典中获取需要的值。
 使用钉钉机器人的接口，拼接后推送text
 '''
+
+
+def get_committer():
+    request_url = build_url
+    url_params = {'token': '12345678'}
+    response_str = requests.get(request_url, url_params).text
+    json_content = json.loads(response_str)
+    committer = ''
+    try:
+        committer = json_content['changeSet']['items'][0]['author']['fullName']
+
+    except:
+        committer = 'dev'
+
+    finally:
+        return committer
 
 
 def dd_push(url):
@@ -39,8 +54,11 @@ def dd_push(url):
     '''
     钉钉推送
     '''
+    committer_name = get_committer()
     con={"msgtype":"text",
-         "text":{"content":"昊天APM接口自动化脚本执行完成。\n测试概述:\n运行总数:"+retries_run+"\n通过数量:"+status_passed+"\n失败数量:"+status_failed+"\n构建地址：\n"+job_url+"\n报告地址：\n"+report_url}
+         "text":{"content":"昊天APM接口自动化脚本执行完成。\n测试概述:\n运行总数:"+retries_run+"\n通过数量:"+status_passed+
+                           "\n失败数量:"+status_failed+"\n构建地址：\n"+job_url+"\n报告地址：\n"+report_url+
+                           "\n提交者:"+committer_name}
          }
 
     requests.post(url,data=json.dumps(con),headers={'Content-Type':'application/json'})
