@@ -9,12 +9,12 @@
 '''
 # 所有api url
 dc_output_list_url = "/api/dataset"
-dc_output_details_url = "/lensData/lensData/getResultSet"
+dc_output_details_url = "/api/lensData/lensData/getResultSet"
 dc_output_list_headers = None
 dc_output_details_headers = None
 # 数据源
 ds_output_list_url = "/api/data_source"
-ds_output_details_url = "/lensData/lensData/getRawData"
+ds_output_details_url = "/api/lensData/lensData/getRawData"
 ds_output_list_headers = None
 ds_output_details_headers = None
 # 模板管理
@@ -34,6 +34,7 @@ skip_clean_ops_headers = None
 
 # 数据输出列表测试数据case_id
 dc_output_case_id = 817845123
+dc_output_id = '7E06FACE-0921-472F-BF52-C070750544D4'
 
 
 # 数据清洗-动作-参数
@@ -197,36 +198,36 @@ dc_output_list_without_page_size = {
 
 # 数据源清洗详情参数
 dc_output_details_schema_check_params = {
-            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
-            "case_id": "442791611"
+            "id": dc_output_id,
+            "case_id": dc_output_case_id
         }
 
 dc_output_details_invalid_caseid_params = {
-            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "id": dc_output_id,
             "case_id": "111111"
         }
 
 dc_output_details_without_caseid_params = {
-            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow"
+            "id": dc_output_id
         }
 
 dc_output_details_none_caseid_params = {
-            "id": "1B53FC68-A2BE-45E9-A091-1722F2246B3B-preshow",
+            "id": dc_output_id,
             "case_id": ""
         }
 
 dc_output_details_invalid_dataid_params = {
             "id": "111111",
-            "case_id": "442791611"
+            "case_id": dc_output_case_id
         }
 
 dc_output_details_without_dataid_params = {
-            "case_id": "442791611"
+            "case_id": dc_output_case_id
         }
 
 dc_output_details_by_none_dataid_params = {
             "id": "",
-            "case_id": "442791611"
+            "case_id": dc_output_case_id
         }
 
 dc_output_details_by_invalid_params = {
