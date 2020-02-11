@@ -36,6 +36,9 @@ skip_clean_ops_headers = None
 dc_output_case_id = 817845123
 dc_output_id = '02E58ABA-91EA-4A35-9467-38230B772E96-preshow'
 
+# 数据源测试数据case_id
+ds_output_case_id = 817845123
+
 
 # 数据清洗-动作-参数
 clean_data = {
@@ -241,49 +244,49 @@ ds_output_list_validity_params ={
             "q_type" : 0,
             "page_size" : 10,
             "page" : 1,
-            "case_id" : '598756534'
+            "case_id" : ds_output_case_id
                     }
 
 ds_output_list_invalid_params = {
             "q_type" : -1,
             "page_size" : 10,
             "page" : 1,
-            "case_id" : '598756534'
+            "case_id" : ds_output_case_id
                     }
 
 ds_output_list_null_q_type = {
     "q_type": None,
     "page_size": 10,
     "page": 1,
-    "case_id": '598756534'
+    "case_id": ds_output_case_id
 }
 
 ds_output_list_invalid_page_size = {
     "q_type": 0,
     "page_size": -1,
     "page": 1,
-    "case_id": '598756534'
+    "case_id": ds_output_case_id
 }
 
 ds_output_list_null_page_size = {
     "q_type": 0,
     "page_size": None,
     "page": 1,
-    "case_id": '598756534'
+    "case_id": ds_output_case_id
 }
 
 ds_output_list_invalid_page = {
     "q_type": 0,
     "page_size": 10,
     "page": -1,
-    "case_id": '598756534'
+    "case_id": ds_output_case_id
 }
 
 ds_output_list_null_page = {
     "q_type": 0,
     "page_size": 10,
     "page": None,
-    "case_id": '598756534'
+    "case_id": ds_output_case_id
 }
 
 ds_output_list_invalid_case_id = {
@@ -303,17 +306,17 @@ ds_output_list_null_case_id={
 # 数据源详情参数
 ds_output_details_validity = {
     "id": '3DA23E9F-F386-4A0D-87B1-25FFCD06A80D',
-    "case_id": '442791611'
+    "case_id": ds_output_case_id
 }
 
 ds_output_details_invalid_data_id = {
     "id": 'xxxjejl1',
-    "case_id": '442791611'
+    "case_id": ds_output_case_id
 }
 
 ds_output_details_null_data_id = {
     "id": '',
-    "case_id": '442791611'
+    "case_id": ds_output_case_id
 }
 
 ds_output_details_invalid_case_id = {
