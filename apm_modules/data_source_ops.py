@@ -36,7 +36,5 @@ class DataSourceOps(OpenURL,BasePage):
         :return: 特定元素的属性值。
         """
         self.driver.get(url)
-        #self.driver.page_source
-        #id_value=self.driver.find_element_by_id('su').get_attribute("value")#取什么值自己定位元素
-        visible=self.driver.find_element_by_id(requiredDom).is_enabled()# 判断元素是否存在
+        visible = self.driver.find_element_by_id(requiredDom).is_enabled()# 判断元素是否存在
         return visible

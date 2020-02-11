@@ -52,8 +52,8 @@ skip_clean_data = {
 
 # 数据源-动作-新增数据参数(这里参数有问题，问开发)
 ds_ops_add_data = {
-    "case_id": "817845123",
-    "open_file":'true'
+    "openfile":"true",
+    "orign_url":"http://192.168.1.78:8018"
 }
 
 # 模板管理-列表参数
