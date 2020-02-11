@@ -8,7 +8,7 @@ import requests
 jenkins_url="http://192.168.1.176:8090/" #jenkins登录地址
 server = jenkins.Jenkins(jenkins_url, username='lianfeng', password='elensdata')
 # print(server.jobs_count())
-job_name="job/jTest-testing-automation-apm_test_driven/" # job名称
+job_name="job/jTest-testing-automation-apm_test_driven_haotian/" # job名称
 job_url=jenkins_url+job_name # job的url地址
 job_last_number=server.get_info(job_name)['lastBuild']['number'] # 获取最后一次构建
 # print(job_last_number)

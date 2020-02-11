@@ -30,7 +30,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—有效case_id参数")
-    def test_data_cleaning_output_valid_case_id(self):
+    def test_data_cleaning_list_valid_case_id(self):
         """
         验证数据源列表—有效case_id；
         校验状态码
@@ -75,7 +75,7 @@ class TestDataCleaningOutput():
 
     @pytest.mark.DataCleaning
     @allure.story("数据清洗输出—有效page参数")
-    def test_data_cleaning_output_with_valid_page_num(self):
+    def test_data_cleaning_list_with_valid_page_num(self):
         """
         验证数据源列表—空case_id；
         校验状态码
