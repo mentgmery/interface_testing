@@ -13,11 +13,10 @@ from jsonschema import validate
 from apm_modules.template_mgt_output import TemplateMgtOutput
 from common.getData import GetData
 
-tm=TemplateMgtOutput()
-
+tm = TemplateMgtOutput()
 template_mgt_list_schema = GetData().read_schema_file('template_mgt_list.schema')
-
 template_mgt_details_schema = GetData().read_schema_file('template_mgt_details.schema')
+
 
 @allure.feature("模板管理—输出")
 class TestTemplateMgt():
@@ -26,7 +25,7 @@ class TestTemplateMgt():
     @allure.story("模板列表—schema结构校验")
     def test_template_mgt_list_schema_check(self):
         json_data = tm.templateMgt_list_validity().json()
-        validate(json_data,schema=template_mgt_list_schema)
+        validate(json_data, schema=template_mgt_list_schema)
 
     @pytest.mark.TemplateMgt
     @allure.story("模板列表—正确的数据")

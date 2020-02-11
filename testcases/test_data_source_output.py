@@ -63,8 +63,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_invalid_page()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—无效的pagesize")
@@ -76,8 +78,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_invalid_page_size()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value) == 1
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—无效的q_type")
@@ -89,8 +93,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_invalid_q_type()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value) == 0
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—空的case_id")
@@ -102,8 +108,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_null_case_id()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—空的page")
@@ -115,8 +123,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_null_page()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—空的page_size")
@@ -128,8 +138,12 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_null_page_size()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        page_size = r_data.json()['data']['pageSize']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert page_size == 10
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源列表—空的q_type")
@@ -141,8 +155,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_list_null_q_type()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源详情—schema结构校验")
@@ -171,8 +187,10 @@ class TestDataSourceOutput():
         r_data=ds.datasource_details_invalid_case_id()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源详情—无效的data_id")
@@ -194,11 +212,13 @@ class TestDataSourceOutput():
         验证数据源详情—空的case_id；
         校验状态码和code码
         """
-        r_data=ds.datasource_details_invalid_case_id()
+        r_data=ds.datasource_details_null_case_id()
         s_code = r_data.status_code
         code = r_data.json()['code']
+        data_value = r_data.json()['data']
         assert s_code == 200
-        assert code != 0
+        assert code == 0
+        assert len(data_value)
 
     @pytest.mark.DataSource
     @allure.story("数据源详情—空的data_id")
