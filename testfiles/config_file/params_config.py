@@ -323,7 +323,7 @@ ds_output_list_null_case_id={
 
 # 数据源详情参数
 ds_output_details_validity = {
-    "case_id": ds_output_case_id，
+    "case_id": ds_output_case_id,
     "id": data_sid
 }
 
