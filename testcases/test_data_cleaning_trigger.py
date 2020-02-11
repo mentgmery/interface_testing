@@ -10,19 +10,19 @@
 import allure,pytest
 
 from apm_modules.data_cleaning_trigger import DataCleaningTrigger
+from common.getData import GetData
+from testfiles.config_file import params_config
 
-
+case_id = params_config.dc_output_case_id
 add_data = {
-        "add": {
         "name": "新增数据",
         "alias": "add",
         "type" : 'window',
         "metadata": {
         },
-        "url": "http://192.168.1.78:8016/filemanagement?case_id=817845123",
+        "url": GetData().get_apm_url('ds')+'/filemanagement?'+str(case_id),
         "desc": '其他应用触发【新增数据】动作时，弹出【新增数据】window（小窗口），在小窗口中完成新增数据，触发父级页面刷新'
       }
-    }
 
 @allure.feature("数据清洗—触发器")
 @pytest.mark.usefixtures('driver_setup')

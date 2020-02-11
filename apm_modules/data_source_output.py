@@ -143,3 +143,12 @@ class DataSourceOutput(BasePage):
         params_dict = params_config.ds_output_details_null_case_id
         return self.get_http_response(inf_type, params_config.ds_output_details_url, params_dict,
                                       params_config.ds_output_details_headers)
+
+    def get_datasource_trigger_url(self):
+        """
+            正向的数据源触发器请求
+            Returns: 触发器的url
+        """
+        params_dict = params_config.ds_tr_add_data
+        return self.get_http_response(inf_type, params_config.ds_ops_url, params_dict,
+                                      params_config.ds_ops_headers).url

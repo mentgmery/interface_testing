@@ -13,11 +13,12 @@ import time
 from apm_modules.data_cleaning_ops import DataCleaningOps
 from apm_modules.data_source_ops import DataSourceOps
 from common.openbrowser import OpenURL
-
+from testfiles.config_file import params_config
+from common.base_page import BasePage
 add_data = "//*[@class='data-etl']/section[2]/aside/div[1]/div/button"
 clean_close = "//*[@id='__layout']/div/div[2]/div/div/section[2]/div[2]/div/div/div[3]/div/button[2]/span"
 
-class DataCleaningTrigger(OpenURL):
+class DataCleaningTrigger(OpenURL,BasePage):
 
     def get_datacleaning_trigger_jumpetl_id(self,url,requiredDom):
         """
