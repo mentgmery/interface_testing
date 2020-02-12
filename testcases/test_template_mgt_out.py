@@ -109,9 +109,7 @@ class TestTemplateMgt():
     @pytest.mark.TemplateMgt
     @allure.story("模板详情—schema结构校验")
     def test_templateMgt_details_schema(self):
-        json_data = tm.templateMgt_details_validity()
-        print(json_data.json())
-        print(json_data.url)
+        json_data = tm.templateMgt_details_validity().json()
         validate(json_data, schema=template_mgt_details_schema)
 
     @pytest.mark.TemplateMgt
@@ -137,7 +135,7 @@ class TestTemplateMgt():
         r_data = tm.templateMgt_details_invalid_temid()
         s_code=r_data.status_code
         assert s_code == 200
-        assert r_data.json()['data'] == {}
+        assert r_data.json()['data'] == {'views': {}, 'images': ''}
 
     @pytest.mark.TemplateMgt
     @allure.story("模板详情—空的temid")
@@ -170,6 +168,5 @@ class TestTemplateMgt():
         校验状态码，其他数据等接口出来再定。
         """
         r_data = tm.templateMgt_details_null_caseid()
-        print(r_data.json())
         s_code=r_data.status_code
         assert s_code == 200
