@@ -118,27 +118,14 @@ tm_output_list_null_pagesize = {
 }
 # 模板管理—详情参数
 tm_output_details_validity = {
-    "tem_id": '777777',
-    "case_id": dc_output_case_id
-}
-
-tm_output_details_invalid_temid = {
-    "tem_id": '我是错误的',
-    "case_id": dc_output_case_id
-}
-
-tm_output_details_null_temid = {
-    "tem_id": "",
     "case_id": dc_output_case_id
 }
 
 tm_output_details_invalid_caseid = {
-    "tem_id": '777777',
     "case_id": '23563'  # 错误的值
 }
 
 tm_output_details_null_caseid = {
-    "tem_id": '777777',
     "case_id": ''  # 空的值
 }
 

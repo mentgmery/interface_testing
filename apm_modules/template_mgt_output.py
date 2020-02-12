@@ -83,37 +83,47 @@ class TemplateMgtOutput(BasePage):
         正向的模板管理—详情—输出,请求值均正常。
         Returns: get请求的结果
         """
+        tem_id = TemplateMgtOutput().templateMgt_list_validity().json()['data']['data'][0]['id']
+        details_url = params_config.tm_output_url+"/"+str(tem_id)
         params_dict = params_config.tm_output_details_validity
-        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, details_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_invalid_temid(self):
         """
         无效的模板管理—详情—输出,错误的temid
         Returns: get请求的结果
         """
-        params_dict = params_config.tm_output_details_invalid_temid
-        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        tem_id = 'xxxxx'
+        details_url = params_config.tm_output_url+"/"+tem_id
+        params_dict = params_config.tm_output_details_validity
+        return self.get_http_response(inf_type, details_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_null_temid(self):
         """
         无效的模板管理—详情—输出,空的temid
         Returns: get请求的结果
         """
-        params_dict = params_config.tm_output_details_null_temid
-        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        tem_id = ''
+        details_url = params_config.tm_output_url+"/"+tem_id
+        params_dict = params_config.tm_output_details_validity
+        return self.get_http_response(inf_type, details_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_invalid_caseid(self):
         """
         无效的模板管理—详情—输出,错误的caseid
         Returns: get请求的结果
         """
+        tem_id = TemplateMgtOutput().templateMgt_list_validity().json()['data']['data'][0]['id']
+        details_url = params_config.tm_output_url+"/"+str(tem_id)
         params_dict = params_config.tm_output_details_invalid_caseid
-        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, details_url, params_dict, params_config.tm_output_details_headers)
 
     def templateMgt_details_null_caseid(self):
         """
         无效的模板管理—详情—输出,空的caseid
         Returns: get请求的结果
         """
+        tem_id = TemplateMgtOutput().templateMgt_list_validity().json()['data']['data'][0]['id']
+        details_url = params_config.tm_output_url+"/"+str(tem_id)
         params_dict = params_config.tm_output_details_null_caseid
-        return self.get_http_response(inf_type, params_config.tm_output_url, params_dict, params_config.tm_output_details_headers)
+        return self.get_http_response(inf_type, details_url, params_dict, params_config.tm_output_details_headers)
