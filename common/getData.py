@@ -21,7 +21,7 @@ from testfiles.config_file import params_config
 config = configparser.ConfigParser()
 proDir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 # 运行环境：0.dev分支 1.昊天  2.本地
-run_env = 0
+run_env = 1
 data_cleaning_inf = 'dc'
 data_source_inf = 'ds'
 template_inf = 'templt'
@@ -30,7 +30,7 @@ port = {'dc': '8018', 'ds': '8016', 'templt': '8017'}
 # 所有dev分支环境的api端口
 dev_port = {'dev_dc': '8018', 'dev_ds': '8016', 'dev_templt': '8017'}
 # 所有昊天环境的api端口
-haotian_port = {'haotian_dc': '8018', 'haotian_ds': '8016', 'haotian_templt': '8017'}
+haotian_port = {'haotian_dc': '18770', 'haotian_ds': '18771', 'haotian_templt': '18772'}
 
 
 class GetData():
