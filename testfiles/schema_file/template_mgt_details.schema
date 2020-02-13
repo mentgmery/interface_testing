@@ -53,7 +53,7 @@
           "title": "The Id Schema",
           "default": 0,
           "examples": [
-            10587714
+            606779192
           ]
         },
         "name": {
@@ -62,7 +62,7 @@
           "title": "The Name Schema",
           "default": "",
           "examples": [
-            "111"
+            "21e2"
           ],
           "pattern": "^(.*)$"
         },
@@ -80,13 +80,13 @@
           "type": "object",
           "title": "The Mapping Schema",
           "required": [
-            "aaa"
+            "dasd"
           ],
           "properties": {
-            "aaa": {
-              "$id": "#/properties/data/properties/mapping/properties/aaa",
+            "dasd": {
+              "$id": "#/properties/data/properties/mapping/properties/dasd",
               "type": "string",
-              "title": "The Aaa Schema",
+              "title": "The Dasd Schema",
               "default": "",
               "examples": [
                 ""
@@ -98,54 +98,7 @@
         "nodes": {
           "$id": "#/properties/data/properties/nodes",
           "type": "array",
-          "title": "The Nodes Schema",
-          "items": {
-            "$id": "#/properties/data/properties/nodes/items",
-            "type": "object",
-            "title": "The Items Schema",
-            "required": [
-              "model_id",
-              "label",
-              "model_name",
-              "prop"
-            ],
-            "properties": {
-              "model_id": {
-                "$id": "#/properties/data/properties/nodes/items/properties/model_id",
-                "type": "integer",
-                "title": "The Model_id Schema",
-                "default": 0,
-                "examples": [
-                  206440926
-                ]
-              },
-              "label": {
-                "$id": "#/properties/data/properties/nodes/items/properties/label",
-                "type": "string",
-                "title": "The Label Schema",
-                "default": "",
-                "examples": [
-                  "3333"
-                ],
-                "pattern": "^(.*)$"
-              },
-              "model_name": {
-                "$id": "#/properties/data/properties/nodes/items/properties/model_name",
-                "type": "string",
-                "title": "The Model_name Schema",
-                "default": "",
-                "examples": [
-                  "人"
-                ],
-                "pattern": "^(.*)$"
-              },
-              "prop": {
-                "$id": "#/properties/data/properties/nodes/items/properties/prop",
-                "type": "object",
-                "title": "The Prop Schema"
-              }
-            }
-          }
+          "title": "The Nodes Schema"
         },
         "links": {
           "$id": "#/properties/data/properties/links",
@@ -155,344 +108,7 @@
         "views": {
           "$id": "#/properties/data/properties/views",
           "type": "object",
-          "title": "The Views Schema",
-          "required": [
-            "visual"
-          ],
-          "properties": {
-            "visual": {
-              "$id": "#/properties/data/properties/views/properties/visual",
-              "type": "object",
-              "title": "The Visual Schema",
-              "required": [
-                "links",
-                "nodes"
-              ],
-              "properties": {
-                "links": {
-                  "$id": "#/properties/data/properties/views/properties/visual/properties/links",
-                  "type": "array",
-                  "title": "The Links Schema"
-                },
-                "nodes": {
-                  "$id": "#/properties/data/properties/views/properties/visual/properties/nodes",
-                  "type": "array",
-                  "title": "The Nodes Schema",
-                  "items": {
-                    "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items",
-                    "type": "object",
-                    "title": "The Items Schema",
-                    "required": [
-                      "data",
-                      "id",
-                      "model",
-                      "model_name",
-                      "model_id",
-                      "name",
-                      "props",
-                      "theme",
-                      "x",
-                      "y"
-                    ],
-                    "properties": {
-                      "data": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/data",
-                        "type": "object",
-                        "title": "The Data Schema",
-                        "required": [
-                          "身份证号",
-                          "姓名",
-                          "性别",
-                          "婚姻状态",
-                          "学历"
-                        ],
-                        "properties": {
-                          "身份证号": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/data/properties/身份证号",
-                            "type": "string",
-                            "title": "The 身份证号 Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "姓名": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/data/properties/姓名",
-                            "type": "string",
-                            "title": "The 姓名 Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "性别": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/data/properties/性别",
-                            "type": "string",
-                            "title": "The 性别 Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "婚姻状态": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/data/properties/婚姻状态",
-                            "type": "string",
-                            "title": "The 婚姻状态 Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "学历": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/data/properties/学历",
-                            "type": "string",
-                            "title": "The 学历 Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          }
-                        }
-                      },
-                      "id": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/id",
-                        "type": "integer",
-                        "title": "The Id Schema",
-                        "default": 0,
-                        "examples": [
-                          1580955556363
-                        ]
-                      },
-                      "model": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model",
-                        "type": "object",
-                        "title": "The Model Schema",
-                        "required": [
-                          "id",
-                          "name",
-                          "icon",
-                          "key",
-                          "type",
-                          "user_id",
-                          "aggregation",
-                          "create_time",
-                          "update_time",
-                          "sys_args"
-                        ],
-                        "properties": {
-                          "id": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/id",
-                            "type": "integer",
-                            "title": "The Id Schema",
-                            "default": 0,
-                            "examples": [
-                              206440926
-                            ]
-                          },
-                          "name": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/name",
-                            "type": "string",
-                            "title": "The Name Schema",
-                            "default": "",
-                            "examples": [
-                              "人"
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "icon": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/icon",
-                            "type": "string",
-                            "title": "The Icon Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "key": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/key",
-                            "type": "string",
-                            "title": "The Key Schema",
-                            "default": "",
-                            "examples": [
-                              ""
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "type": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/type",
-                            "type": "integer",
-                            "title": "The Type Schema",
-                            "default": 0,
-                            "examples": [
-                              0
-                            ]
-                          },
-                          "user_id": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/user_id",
-                            "type": "integer",
-                            "title": "The User_id Schema",
-                            "default": 0,
-                            "examples": [
-                              0
-                            ]
-                          },
-                          "aggregation": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/aggregation",
-                            "type": "string",
-                            "title": "The Aggregation Schema",
-                            "default": "",
-                            "examples": [
-                              "{\n    \"query\": {\n\t\t\"bool\": {\n\t\t\t\"must\":[]\n    \t}\n    },\n    \"size\":0,\n\t\"aggs\":{\n\t   \t\t\"姓名\":{\n\t   \t\t\t\"terms\": { \"field\": \"姓名\" },\n\t   \t\t\t\"aggs\":{\n\t   \t\t\t\t\"ids\":{\n\t   \t\t\t\t\t\"top_hits\": {\n\t   \t\t\t\t\t\t\"_source\": {\n                            \t\"includes\": [\"id\"]\n                        \t}\n\t   \t\t\t\t\t}\n\t   \t\t\t\t}\n\t   \t\t\t\t\n\t   \t\t\t}\n\t   \t\t},\n\t   \t\t\"性别\":{\n\t   \t\t\t\"terms\": { \"field\": \"性别\" },\n\t   \t\t\t\"aggs\":{\n\t   \t\t\t\t\"ids\":{\n\t   \t\t\t\t\t\"top_hits\": {\n\t   \t\t\t\t\t\t\"_source\": {\n                            \t\"includes\": [\"id\"]\n                        \t}\n\t   \t\t\t\t\t}\n\t   \t\t\t\t}\n\t   \t\t\t\t\n\t   \t\t\t}\n\t   \t\t}\n        }\n}"
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "create_time": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/create_time",
-                            "type": "string",
-                            "title": "The Create_time Schema",
-                            "default": "",
-                            "examples": [
-                              "2019-05-28 06:10:48"
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "update_time": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/update_time",
-                            "type": "string",
-                            "title": "The Update_time Schema",
-                            "default": "",
-                            "examples": [
-                              "2019-12-25 18:25:36"
-                            ],
-                            "pattern": "^(.*)$"
-                          },
-                          "sys_args": {
-                            "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model/properties/sys_args",
-                            "type": "null",
-                            "title": "The Sys_args Schema",
-                            "default": null,
-                            "examples": [
-                              null
-                            ]
-                          }
-                        }
-                      },
-                      "model_name": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model_name",
-                        "type": "string",
-                        "title": "The Model_name Schema",
-                        "default": "",
-                        "examples": [
-                          "人"
-                        ],
-                        "pattern": "^(.*)$"
-                      },
-                      "model_id": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/model_id",
-                        "type": "integer",
-                        "title": "The Model_id Schema",
-                        "default": 0,
-                        "examples": [
-                          206440926
-                        ]
-                      },
-                      "name": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/name",
-                        "type": "string",
-                        "title": "The Name Schema",
-                        "default": "",
-                        "examples": [
-                          "3333"
-                        ],
-                        "pattern": "^(.*)$"
-                      },
-                      "props": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/props",
-                        "type": "array",
-                        "title": "The Props Schema",
-                        "items": {
-                          "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/props/items",
-                          "type": "object",
-                          "title": "The Items Schema",
-                          "required": [
-                            "from",
-                            "to",
-                            "exampleVal"
-                          ],
-                          "properties": {
-                            "from": {
-                              "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/props/items/properties/from",
-                              "type": "string",
-                              "title": "The From Schema",
-                              "default": "",
-                              "examples": [
-                                "身份证号"
-                              ],
-                              "pattern": "^(.*)$"
-                            },
-                            "to": {
-                              "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/props/items/properties/to",
-                              "type": "string",
-                              "title": "The To Schema",
-                              "default": "",
-                              "examples": [
-                                ""
-                              ],
-                              "pattern": "^(.*)$"
-                            },
-                            "exampleVal": {
-                              "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/props/items/properties/exampleVal",
-                              "type": "string",
-                              "title": "The Exampleval Schema",
-                              "default": "",
-                              "examples": [
-                                ""
-                              ],
-                              "pattern": "^(.*)$"
-                            }
-                          }
-                        }
-                      },
-                      "theme": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/theme",
-                        "type": "string",
-                        "title": "The Theme Schema",
-                        "default": "",
-                        "examples": [
-                          "dark"
-                        ],
-                        "pattern": "^(.*)$"
-                      },
-                      "x": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/x",
-                        "type": "integer",
-                        "title": "The X Schema",
-                        "default": 0,
-                        "examples": [
-                          282
-                        ]
-                      },
-                      "y": {
-                        "$id": "#/properties/data/properties/views/properties/visual/properties/nodes/items/properties/y",
-                        "type": "integer",
-                        "title": "The Y Schema",
-                        "default": 0,
-                        "examples": [
-                          168
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "title": "The Views Schema"
         },
         "cypher": {
           "$id": "#/properties/data/properties/cypher",
@@ -509,7 +125,7 @@
           "title": "The Update_time Schema",
           "default": "",
           "examples": [
-            "2020-02-06 10:19:33"
+            "2020-02-06 11:19:48"
           ],
           "pattern": "^(.*)$"
         },
@@ -519,7 +135,7 @@
           "title": "The Create_time Schema",
           "default": "",
           "examples": [
-            "2020-02-06 10:19:06"
+            "2020-02-06 11:19:48"
           ],
           "pattern": "^(.*)$"
         },
@@ -529,7 +145,7 @@
           "title": "The Images Schema",
           "default": "",
           "examples": [
-            "/static/upload/task/332E4F400AE0.png"
+            ""
           ],
           "pattern": "^(.*)$"
         }
